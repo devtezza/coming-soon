@@ -7,19 +7,28 @@
     padding: 0;
 }
 
-body, html {
+body {
+    border: 1px solid green;
+    height: 100%;    
     max-width: 1440px;
     min-width: 310px;
+    margin: 0 auto;
     font-size: 13px;
+    font-weight: 400;
     font-family: 'Poppins', sans-serif;    
 }
 
-.container {
-    margin: 0 25px;    
+
+h1, h2 {
+    font-weight: 700;
 }
 
-h1 {
-    font-size: 5.6rem;
+h2 {
+    font-size: 1.47rem;
+}
+
+h3 {
+    font-size: 1.23rem;
 }
 
 

@@ -1,10 +1,26 @@
-header {
-    margin: 3.15rem 0;    
+header {   
+    
+    height: 68.9vh;
+    margin: 3.15rem 1.8rem;
+    border: 1px solid red;    
 }
 
 h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    max-width: 450px;
+    letter-spacing: 0.91px;
+    color: $dark;
+
     .line2 {
         margin-top: -31px;
-        color: green;
+        background-color: $primary;
+        background-image: $to-right;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
+
+
+
+

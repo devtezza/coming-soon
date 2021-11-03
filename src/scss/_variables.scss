@@ -1,0 +1,37 @@
+// Primary Colors
+$primary: #dc186e;
+$primary-minus: #ED5397;
+$primary-plus: #B50B56;
+
+$secondary: #2AA1FE;
+$secondary-minus: #5EB8FE;
+$secondary-plus: #047CD9;
+
+// Dark Colors
+$dark: hsl(0, 0%, 16%);
+$dark-80: hsla(0, 0%, 16%, 0.8);
+
+$dark-minus: #3B3B3B;
+$dark-minus-60: hsla(0, 0%, 23%, 0.6);
+$dark-minus-85: hsla(0, 0%, 23%, 0.85);
+$dark-minus-50: hsla(0, 0%, 23%, 0.5);
+
+$dark-plus: #121212;
+
+// Light Colors
+$light: #F5F5F5;
+$light-minus: #FFF;
+$light-plus: #EDEDED;
+
+// Alert Colors
+$success: #00A878;
+$info: $secondary;
+$danger: #C21543;
+
+// Gradient Backgrounds
+$to-right: linear-gradient(to right, $primary, $secondary);
+$to-left: linear-gradient(to left, $primary, $secondary);
+$to-left-plus: linear-gradient(to left, $primary-plus, $secondary-plus);
+$header-bg: linear-gradient(to bottom right, $light-minus, $light-plus);
+
+
