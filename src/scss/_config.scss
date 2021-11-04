@@ -7,8 +7,16 @@
     padding: 0;
 }
 
-body {
-    border: 1px solid green;
+// body {
+//     border: 1px solid black;
+// }
+
+// html {
+//     border: 1px solid yellow;
+// }
+
+body, html {
+    // border: 1px solid green;
     height: 100%;    
     max-width: 1440px;
     min-width: 310px;

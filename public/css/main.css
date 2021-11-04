@@ -6,8 +6,7 @@
   padding: 0;
 }
 
-body {
-  border: 1px solid green;
+body, html {
   height: 100%;
   max-width: 1440px;
   min-width: 310px;
@@ -31,15 +30,16 @@ h3 {
 
 header {
   height: 68.9vh;
-  margin: 3.15rem 1.8rem;
-  border: 1px solid red;
+  margin: 3.15rem;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
 h1 {
   font-size: 5.6rem;
   font-weight: 700;
   max-width: 450px;
-  letter-spacing: 0.91px;
+  letter-spacing: 0.30rem;
   color: #292929;
 }
 
