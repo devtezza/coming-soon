@@ -4,6 +4,7 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline: none;
 }
 
 body, html {
@@ -36,6 +37,7 @@ header {
 }
 
 h1 {
+  margin-bottom: 3.15rem;
   font-size: 5.6rem;
   font-weight: 700;
   max-width: 450px;
@@ -52,15 +54,42 @@ h1 .line2 {
   -webkit-text-fill-color: transparent;
 }
 
+input[type=email] {
+  background-image: url("/assets/icons/email-icon.svg");
+  background-position: 15px 7.5px;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 7.5px 30px 7.5px 50px;
+  border: 3.93px solid rgba(41, 41, 41, 0.8);
+  border-radius: 100px;
+  font-size: 1.077rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+input[type=email]::-webkit-input-placeholder {
+  color: #3B3B3B;
+}
+
+input[type=email]:-ms-input-placeholder {
+  color: #3B3B3B;
+}
+
+input[type=email]::-ms-input-placeholder {
+  color: #3B3B3B;
+}
+
+input[type=email]::placeholder {
+  color: #3B3B3B;
+}
+
+input[type=email]:focus-visible {
+  outline: 0.5px solid #292929;
+}
+
 footer {
   height: 20vh;
   width: 100%;
   background: rgba(59, 59, 59, 0.6);
-}
-
-.inner {
-  border: 1px solid purple;
-  height: 100%;
-  margin: 0 25px;
+  padding: 0 25px 0 25px;
 }
 /*# sourceMappingURL=main.css.map */
