@@ -1,7 +1,7 @@
 header {   
-    
-    height: 68.9vh;
-    margin: 3.15rem;
+    // border: 1px solid black;
+    height: calc(61.6vh - 3.15rem);
+    margin-top: 3.15rem;
     margin-left: 25px;
     margin-right: 25px;
        
@@ -9,7 +9,7 @@ header {
 
 h1 {
     // border: 1px solid red;
-    margin-bottom: 3.15rem; 
+    margin-bottom: 5.8rem; 
     font-size: 5.6rem;
     font-weight: 700;
     max-width: 450px;
@@ -27,19 +27,29 @@ h1 {
     }
 }
 
+.subscription {
+    
+    text-align: center;
+}
+
+input {
+    font-family: 'Poppins', sans-serif;
+}
+
 input[type=email] {
+    width: 100%;    
+    padding: 7.5px 30px 7.5px 50px;
+    margin-bottom: 1.7rem;
+
     background-image: url('/assets/icons/email-icon.svg');
     background-position: 15px 7.5px;
     background-repeat: no-repeat;
-    
-    width: 100%;    
-    padding: 7.5px 30px 7.5px 50px;
 
     border: 3.93px solid $dark-80;
     border-radius: 100px;
     
     font-size: 1.077rem;
-    font-family: 'Poppins', sans-serif; 
+    
     
     &::placeholder {
         color: $dark-minus;
@@ -50,6 +60,22 @@ input[type=email] {
     }
 
     
+}
+
+input[type=submit] {    
+    padding: 0.65rem 2.6rem;
+    margin: 0 auto;
+
+    background-image: $to-right;
+
+    outline: none;
+    border: none;
+    border-radius: 70px;
+
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.07rem;
+    color: $light-minus;
 }
 
 
