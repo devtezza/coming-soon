@@ -1,14 +1,18 @@
-header {   
+header {
+    background-image: $header-bg; 
+   
+}
+
+.header-container {   
     // border: 1px solid black;
-    height: calc(61.6vh - 3.15rem);
-    margin-top: 3.15rem;
+    height: 61vh;    
+    padding-top: 3.15rem;
     margin-left: 25px;
     margin-right: 25px;
        
 }
 
-h1 {
-    // border: 1px solid red;
+h1 {    
     margin-bottom: 5.8rem; 
     font-size: 5.6rem;
     font-weight: 700;
@@ -27,8 +31,7 @@ h1 {
     }
 }
 
-.subscription {
-    
+.subscription {    
     text-align: center;
 }
 
@@ -44,6 +47,7 @@ input[type=email] {
     background-image: url('/assets/icons/email-icon.svg');
     background-position: 15px 7.5px;
     background-repeat: no-repeat;
+    background-color: $light-plus;
 
     border: 3.93px solid $dark-80;
     border-radius: 100px;

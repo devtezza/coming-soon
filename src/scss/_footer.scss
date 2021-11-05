@@ -1,7 +1,75 @@
 footer {
-    height: calc(39.4vh - 3.15rem);
+    // border: 1px solid yellow;
+    height: 38.9vh;
     width: 100%;
     background: $dark-minus-60;
-    padding: 0 25px 0 25px;           
+    padding: 0 25px 0 25px;
+    // position: relative;           
 }
 
+.counter-container {
+    position: absolute;
+    margin-top: -1.077rem;
+    margin-bottom: 13.4rem;
+    border: 1px solid red;
+    display: flex;   
+}
+
+.time-container {
+    margin-left: 1.29rem;
+
+    &:first-child {
+        margin-left: 0;        
+    }
+        
+}
+
+.outer-circle {
+    position: relative;
+    height: 5.25rem;
+    width: 5.25rem;
+    
+    border-radius: 50%;
+    background-image: $to-right-plus;
+    box-shadow: 1.25px -1.25px 9.35px hsla(0, 0%, 0%, 0.2);
+}
+
+.inner-circle {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: $circle-bg;
+    border-radius: inherit; 
+    
+    top: 0.3rem;
+    bottom: 0.3rem;
+    right: 0.3rem;
+    left: 0.3rem;
+    z-index: 3;
+    
+    font-family: 'Michroma', sans-serif;
+    font-size: 1.23rem;
+    letter-spacing: 1px;     
+}
+
+.number-days {
+    letter-spacing: 0.7px;
+}
+
+.time-label {    
+    margin-top: 0.6rem;
+    color: $light;    
+    text-align: center;
+}
+
+.social-icons {
+    position: relative;
+    top: 14.46rem;    
+    border: 1px solid black;
+}
+
+li {
+    display: inline-block;
+}

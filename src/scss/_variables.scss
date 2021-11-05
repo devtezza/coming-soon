@@ -30,8 +30,10 @@ $danger: #C21543;
 
 // Gradient Backgrounds
 $to-right: linear-gradient(to right, $primary, $secondary);
+$to-right-plus: linear-gradient(to right, $primary-plus, $secondary-plus);
 $to-left: linear-gradient(to left, $primary, $secondary);
 $to-left-plus: linear-gradient(to left, $primary-plus, $secondary-plus);
 $header-bg: linear-gradient(to bottom right, $light-minus, $light-plus);
+$circle-bg: radial-gradient($light, $light-minus);
 
 
