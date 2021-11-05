@@ -69,7 +69,8 @@ input[type=email] {
 input[type=submit] {    
     padding: 0.65rem 2.6rem;
     margin: 0 auto;
-
+    
+    transition: opacity .4s ease-in;
     background-image: $to-right;
 
     outline: none;
@@ -80,6 +81,11 @@ input[type=submit] {
     font-weight: 600;
     letter-spacing: 0.07rem;
     color: $light-minus;
+
+    &:hover {
+        opacity: 0.8;
+        
+    }
 }
 
 

@@ -2,7 +2,7 @@ footer {
     // border: 1px solid yellow;
     height: 38.9vh;
     width: 100%;
-    background: $dark-minus-60;
+    background: #999999;
     padding: 0 25px 0 25px;
     // position: relative;           
 }
@@ -11,7 +11,7 @@ footer {
     position: absolute;
     margin-top: -1.077rem;
     margin-bottom: 13.4rem;
-    border: 1px solid red;
+    // border: 1px solid red;
     display: flex;   
 }
 
@@ -25,37 +25,43 @@ footer {
 }
 
 .outer-circle {
-    position: relative;
+    // position: relative;
     height: 5.25rem;
     width: 5.25rem;
-    
-    border-radius: 50%;
-    background-image: $to-right-plus;
-    box-shadow: 1.25px -1.25px 9.35px hsla(0, 0%, 0%, 0.2);
-}
-
-.inner-circle {
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    border-radius: 50%;
+    background-color: $secondary;
+    background-image: $to-right-plus;
+    box-shadow: 1.25px -1.25px 9.35px hsla(0, 0%, 0%, 0.2);
+    padding: 3%;
+}
 
+.inner-circle {
+    // position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.7rem;
+    width: 4.7rem;
+    
     background-image: $circle-bg;
     border-radius: inherit; 
     
-    top: 0.3rem;
-    bottom: 0.3rem;
-    right: 0.3rem;
-    left: 0.3rem;
-    z-index: 3;
+    
     
     font-family: 'Michroma', sans-serif;
     font-size: 1.23rem;
-    letter-spacing: 1px;     
+    letter-spacing: 1px;  
+    
+    color: $dark-minus;
 }
 
 .number-days {
     letter-spacing: 0.7px;
+    
 }
 
 .time-label {    
@@ -65,11 +71,43 @@ footer {
 }
 
 .social-icons {
-    position: relative;
-    top: 14.46rem;    
-    border: 1px solid black;
+    position: relative;    
+    top: 18.77rem;    
+    // border: 1px solid $light;
+    
+    text-align: center;
 }
+
+
 
 li {
     display: inline-block;
+    // border: 1px solid red;
+
+    margin-left: 1.54rem;
+    
+    svg {
+        path {
+            transition: all .4s ease;
+            fill: $light-minus;
+        }
+    }
+
+    &:first-child {
+        margin-left: 0;           
+    }
+
+    &:hover {
+        
+        svg {
+            
+            path {
+                transition: all .4s ease;
+                fill: $dark-minus;
+                
+            }
+        }
+    }
 }
+
+
