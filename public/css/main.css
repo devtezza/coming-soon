@@ -9,7 +9,7 @@
 }
 
 body, html {
-  height: 100vh;
+  height: 100%;
   font-size: 13px;
 }
 
@@ -34,29 +34,33 @@ h3 {
   font-size: 1.23rem;
 }
 
+input[type=submit], li {
+  cursor: pointer;
+}
+
 header {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#FFF), to(#EDEDED));
   background-image: linear-gradient(to bottom right, #FFF, #EDEDED);
 }
 
 .header-container {
-  height: 61vh;
   padding-top: 3.15rem;
-  margin-left: 25px;
-  margin-right: 25px;
+  padding-bottom: 7.2rem;
+  margin-left: 1.93rem;
+  margin-right: 1.93rem;
 }
 
 h1 {
   margin-bottom: 5.8rem;
   font-size: 5.6rem;
   font-weight: 700;
-  max-width: 450px;
+  max-width: 34.62rem;
   letter-spacing: 0.30rem;
   color: #292929;
 }
 
 h1 .line2 {
-  margin-top: -31px;
+  margin-top: -2.39rem;
   background-color: #dc186e;
   background-image: -webkit-gradient(linear, left top, right top, from(#dc186e), to(#2AA1FE));
   background-image: linear-gradient(to right, #dc186e, #2AA1FE);
@@ -74,14 +78,14 @@ input {
 
 input[type=email] {
   width: 100%;
-  padding: 7.5px 30px 7.5px 50px;
+  padding: 0.58rem 2.3rem 0.58rem 3.85rem;
   margin-bottom: 1.7rem;
   background-image: url("/assets/icons/email-icon.svg");
-  background-position: 15px 7.5px;
+  background-position: 1.16rem 0.58rem;
   background-repeat: no-repeat;
   background-color: #EDEDED;
-  border: 3.93px solid rgba(41, 41, 41, 0.8);
-  border-radius: 100px;
+  border: 0.3rem solid rgba(41, 41, 41, 0.8);
+  border-radius: 7.7rem;
   font-size: 1.077rem;
 }
 
@@ -102,19 +106,21 @@ input[type=email]::placeholder {
 }
 
 input[type=email]:focus-visible {
-  outline: 0.5px solid #292929;
+  outline: 0.03rem solid #292929;
 }
 
 input[type=submit] {
   padding: 0.65rem 2.6rem;
   margin: 0 auto;
-  -webkit-transition: opacity .4s ease-in;
-  transition: opacity .4s ease-in;
-  background-image: -webkit-gradient(linear, left top, right top, from(#dc186e), to(#2AA1FE));
-  background-image: linear-gradient(to right, #dc186e, #2AA1FE);
+  background-image: -webkit-gradient(linear, right top, left top, from(#047CD9), color-stop(20%, #2AA1FE), color-stop(90%, #B50B56));
+  background-image: linear-gradient(270deg, #047CD9 0%, #2AA1FE 20%, #B50B56 90%);
+  background-size: 135%;
+  background-position: left;
+  -webkit-transition: background-position .4s ease-out;
+  transition: background-position .4s ease-out;
   outline: none;
   border: none;
-  border-radius: 70px;
+  border-radius: 5.38rem;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.07rem;
@@ -122,14 +128,14 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  opacity: 0.8;
+  background-position: right;
 }
 
 footer {
-  height: 38.9vh;
+  height: 50%;
   width: 100%;
   background: #999999;
-  padding: 0 25px 0 25px;
+  padding: 0 1.93rem 24rem 1.93rem;
 }
 
 .counter-container {
@@ -163,11 +169,9 @@ footer {
           justify-content: center;
   border-radius: 50%;
   background-color: #2AA1FE;
-  background-image: -webkit-gradient(linear, left top, right top, from(#dc186e), to(#047CD9));
-  background-image: linear-gradient(to right, #dc186e, #047CD9);
-  -webkit-box-shadow: 1.25px -1.25px 9.35px rgba(0, 0, 0, 0.2);
-          box-shadow: 1.25px -1.25px 9.35px rgba(0, 0, 0, 0.2);
-  padding: 3%;
+  background-image: linear-gradient(250deg, #047CD9 5%, #2AA1FE 20%, #dc186e 90%);
+  -webkit-box-shadow: 0.097rem -0.097rem 0.72rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0.097rem -0.097rem 0.72rem rgba(0, 0, 0, 0.2);
 }
 
 .inner-circle {
@@ -180,18 +184,18 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 4.7rem;
-  width: 4.7rem;
+  height: 4.6rem;
+  width: 4.6rem;
   background-image: radial-gradient(#F5F5F5, #FFF);
   border-radius: inherit;
   font-family: 'Michroma', sans-serif;
   font-size: 1.23rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.077rem;
   color: #3B3B3B;
 }
 
 .number-days {
-  letter-spacing: 0.7px;
+  letter-spacing: 0.054rem;
 }
 
 .time-label {
@@ -200,10 +204,66 @@ footer {
   text-align: center;
 }
 
-.social-icons {
+.config-container {
+  position: absolute;
+  margin-top: 12rem;
+  margin-left: 21.5rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.config-container .button {
   position: relative;
-  top: 18.77rem;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FFF), to(#EDEDED));
+  background: linear-gradient(to bottom right, #FFF, #EDEDED);
+  border-radius: 13%;
+}
+
+.config-container .button svg * {
+  width: 100%;
+  height: 100%;
+}
+
+.config-container .button svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.config-container .button svg path {
+  stroke: #3B3B3B;
+}
+
+.config-container .button .border-bg {
+  position: absolute;
+  top: -0.2rem;
+  bottom: -0.2rem;
+  left: -0.2rem;
+  right: -0.2rem;
+  background: -webkit-gradient(linear, left top, right top, from(#dc186e), to(#2AA1FE));
+  background: linear-gradient(to right, #dc186e, #2AA1FE);
+  border-radius: 15%;
+  z-index: -3;
+}
+
+.social-icons {
+  position: absolute;
+  margin-top: 19rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 li {
@@ -212,8 +272,8 @@ li {
 }
 
 li svg path {
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
   fill: #FFF;
 }
 
@@ -221,9 +281,19 @@ li:first-child {
   margin-left: 0;
 }
 
+li:hover {
+  opacity: 0.8;
+}
+
 li:hover svg path {
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
   fill: #3B3B3B;
+}
+
+.attribution {
+  position: relative;
+  top: 22rem;
+  font-size: 0.7rem;
+  color: #EDEDED;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

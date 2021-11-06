@@ -10,7 +10,7 @@
    }
 
 body, html {
-    height: 100vh;
+    height: 100%;
     font-size: 13px;
 }
 
@@ -38,6 +38,10 @@ h2 {
 
 h3 {
     font-size: 1.23rem;
+}
+
+input[type=submit], li {
+    cursor: pointer;
 }
 
 

@@ -1,14 +1,15 @@
 header {
-    background-image: $header-bg; 
+    background-image: $header-bg;   
    
 }
 
 .header-container {   
     // border: 1px solid black;
-    height: 61vh;    
+    // height: 61vh;    
     padding-top: 3.15rem;
-    margin-left: 25px;
-    margin-right: 25px;
+    padding-bottom: 7.2rem;
+    margin-left: 1.93rem;
+    margin-right: 1.93rem;
        
 }
 
@@ -16,14 +17,14 @@ h1 {
     margin-bottom: 5.8rem; 
     font-size: 5.6rem;
     font-weight: 700;
-    max-width: 450px;
+    max-width: 34.62rem;
     letter-spacing: 0.30rem;
     color: $dark;
    
 
     .line2 {
         // border: 1px dashed orange;
-        margin-top: -31px;
+        margin-top: -2.39rem;
         background-color: $primary;
         background-image: $to-right;
         -webkit-background-clip: text;        
@@ -41,16 +42,16 @@ input {
 
 input[type=email] {
     width: 100%;    
-    padding: 7.5px 30px 7.5px 50px;
+    padding: 0.58rem 2.3rem 0.58rem 3.85rem;
     margin-bottom: 1.7rem;
 
     background-image: url('/assets/icons/email-icon.svg');
-    background-position: 15px 7.5px;
+    background-position: 1.16rem 0.58rem;
     background-repeat: no-repeat;
     background-color: $light-plus;
 
-    border: 3.93px solid $dark-80;
-    border-radius: 100px;
+    border: 0.3rem solid $dark-80;
+    border-radius: 7.7rem;
     
     font-size: 1.077rem;
     
@@ -60,7 +61,7 @@ input[type=email] {
     }
     
     &:focus-visible {
-        outline: 0.5px solid $dark;
+        outline: 0.03rem solid $dark;
     }
 
     
@@ -69,13 +70,20 @@ input[type=email] {
 input[type=submit] {    
     padding: 0.65rem 2.6rem;
     margin: 0 auto;
+    background-image: $to-right-double;
     
-    transition: opacity .4s ease-in;
-    background-image: $to-right;
+    background-size: 135%;
+    background-position: left;
+
+    -webkit-transition: background-position .4s ease-out;
+    transition: background-position .4s ease-out;
+    
+    
+    
 
     outline: none;
     border: none;
-    border-radius: 70px;
+    border-radius: 5.38rem;
 
     font-size: 1rem;
     font-weight: 600;
@@ -83,7 +91,9 @@ input[type=submit] {
     color: $light-minus;
 
     &:hover {
-        opacity: 0.8;
+        // opacity: 0.9;
+        //background-size: 100%;
+        background-position: right;
         
     }
 }
