@@ -61,7 +61,8 @@ input[type=email] {
     }
     
     &:focus-visible {
-        outline: 0.03rem solid $dark;
+        outline: none;
+        border: 0.3rem solid $secondary;
     }
 
     

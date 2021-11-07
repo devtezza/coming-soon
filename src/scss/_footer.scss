@@ -1,7 +1,8 @@
 footer {
-    // border: 1px solid yellow;    
+    // border: 1px solid yellow;
+    display: flex;
     height: 50%;
-    // height: auto;
+    
     width: 100%;
     background: #999999;
     padding: 0 1.93rem 24rem 1.93rem;                 
@@ -11,6 +12,8 @@ footer {
     position: absolute;
     margin-top: -1.077rem;
     margin-bottom: 13.4rem;
+    left: 50%;
+    transform: translateX(-50%);
     // border: 1px solid red;
     display: flex;    
    
@@ -69,13 +72,13 @@ footer {
     text-align: center;
 }
 
-.config-container { 
+.button-container { 
     
     position: absolute;
-    margin-top: 12rem;
-    margin-left: 21.5rem;    
-    transform: translateY(-50%);
     
+    margin-top: 12rem;
+    margin-left: 1.5rem;   
+    transform: translateY(-50%);    
     
     cursor: pointer; 
 

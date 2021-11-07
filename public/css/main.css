@@ -106,7 +106,8 @@ input[type=email]::placeholder {
 }
 
 input[type=email]:focus-visible {
-  outline: 0.03rem solid #292929;
+  outline: none;
+  border: 0.3rem solid #2AA1FE;
 }
 
 input[type=submit] {
@@ -132,6 +133,9 @@ input[type=submit]:hover {
 }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 50%;
   width: 100%;
   background: #999999;
@@ -142,6 +146,9 @@ footer {
   position: absolute;
   margin-top: -1.077rem;
   margin-bottom: 13.4rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -204,16 +211,16 @@ footer {
   text-align: center;
 }
 
-.config-container {
+.button-container {
   position: absolute;
   margin-top: 12rem;
-  margin-left: 21.5rem;
+  margin-left: 1.5rem;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   cursor: pointer;
 }
 
-.config-container .button {
+.button-container .button {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -232,21 +239,21 @@ footer {
   border-radius: 13%;
 }
 
-.config-container .button svg * {
+.button-container .button svg * {
   width: 100%;
   height: 100%;
 }
 
-.config-container .button svg {
+.button-container .button svg {
   width: 2rem;
   height: 2rem;
 }
 
-.config-container .button svg path {
+.button-container .button svg path {
   stroke: #3B3B3B;
 }
 
-.config-container .button .border-bg {
+.button-container .button .border-bg {
   position: absolute;
   top: -0.2rem;
   bottom: -0.2rem;
@@ -295,5 +302,55 @@ li:hover svg path {
   font-size: 0.7rem;
   color: #EDEDED;
   text-align: center;
+}
+
+@media screen and (min-width: 640px) {
+  body {
+    border: 2px dashed gold;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header-container {
+    border: 1px solid black;
+    padding-top: 7.70rem;
+    margin-left: 10.92rem;
+    margin-right: 10.92rem;
+    background-image: url(../../assets/hero-img.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 35%;
+  }
+  h1 {
+    width: 50%;
+    margin-bottom: 3.46rem;
+    font-size: 7.761rem;
+  }
+  .subscription {
+    text-align: initial;
+  }
+  input[type=email] {
+    width: 60%;
+    padding: 1.84rem 2.3rem 1.84rem 5.38rem;
+    background-image: url("/assets/icons/email-icon.svg");
+    background-position: 1.7rem 2rem;
+    background-repeat: no-repeat;
+    background-color: #EDEDED;
+    border: 0.5rem solid rgba(41, 41, 41, 0.8);
+    border-radius: 7.7rem;
+    font-size: 1.24rem;
+  }
+  input[type=email]:focus-visible {
+    border: 0.5rem solid #2AA1FE;
+  }
+  input[type=submit] {
+    padding: 1.27rem 3.84rem;
+    margin: 0 auto 0 -18.5rem;
+    font-size: 1.46rem;
+    font-weight: 700;
+  }
+  .button-container {
+    margin-top: 3rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,81 @@
+@include media-sm {    
+        body {
+           border: 2px dashed gold;
+        }
+}
+
+// @include media-md {
+    
+// }
+
+@include media-lg {
+    
+
+    .header-container {   
+        border: 1px solid black;            
+        padding-top: 7.70rem;
+        // padding-bottom: 7.2rem;
+        margin-left: 10.92rem;
+        margin-right: 10.92rem;
+
+        background-image: url(../../assets/hero-img.png);
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: max(35%);
+
+           
+    }
+
+    h1 {
+        // border: 1px solid green;
+       width: 50%;
+        margin-bottom: 3.46rem;
+        font-size: 7.761rem;
+    }
+
+
+    .subscription {    
+        text-align: initial;
+    }    
+   
+    
+    input[type=email] {
+        width: 60%;    
+        padding: 1.84rem 2.3rem 1.84rem 5.38rem;
+        
+    
+        background-image: url('/assets/icons/email-icon.svg');
+        background-position: 1.7rem 2rem;
+        background-repeat: no-repeat;
+        background-color: $light-plus;      
+
+    
+        border: 0.5rem solid $dark-80;
+        border-radius: 7.7rem;
+
+        
+        font-size: 1.24rem;        
+       
+        
+        &:focus-visible {            
+            border: 0.5rem solid $secondary;
+        }
+    
+        
+    }
+    
+    input[type=submit] {    
+        padding: 1.27rem 3.84rem;
+        margin: 0 auto 0 -18.5rem;
+        
+    
+        font-size: 1.46rem;
+        font-weight: 700;
+        
+       
+    }
+
+    .button-container {
+        margin-top: 3rem;
+    }
+}
