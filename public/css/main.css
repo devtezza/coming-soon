@@ -38,6 +38,11 @@ input[type=submit], li {
   cursor: pointer;
 }
 
+svg * {
+  width: 100%;
+  height: 100%;
+}
+
 header {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#FFF), to(#EDEDED));
   background-image: linear-gradient(to bottom right, #FFF, #EDEDED);
@@ -239,11 +244,6 @@ footer {
   border-radius: 13%;
 }
 
-.button-container .button svg * {
-  width: 100%;
-  height: 100%;
-}
-
 .button-container .button svg {
   width: 2rem;
   height: 2rem;
@@ -332,6 +332,7 @@ li:hover svg path {
     border: 1px solid blue;
   }
   .header-container {
+    border: 1px solid gray;
     padding-top: 7.70rem;
     margin-left: 6rem;
     margin-right: 6rem;
@@ -350,18 +351,14 @@ li:hover svg path {
   }
   .subscription {
     text-align: initial;
-    width: 72%;
     width: calc(min(650px, 72%));
   }
   input[type=email] {
     width: 100%;
     padding: 1.84rem 19rem 1.84rem 4.8rem;
-    background-image: url("/assets/icons/email-icon.svg");
-    background-position: 1.7rem 2rem;
-    background-repeat: no-repeat;
-    background-color: #EDEDED;
     border: 0.5rem solid rgba(41, 41, 41, 0.8);
     border-radius: 7.7rem;
+    background-position: 1.7rem 2rem;
     font-size: 1.16rem;
   }
   input[type=email]:focus-visible {
@@ -374,14 +371,76 @@ li:hover svg path {
     font-size: 1.46rem;
     font-weight: 700;
   }
+  footer {
+    padding: 0 6rem 24rem 6rem;
+  }
+  .counter-container {
+    margin-top: -3.5rem;
+  }
   .time-container {
     margin-left: 6rem;
   }
   .time-container:first-child {
     margin-left: 0;
   }
+  .outer-circle {
+    height: 13.2rem;
+    width: 13.2rem;
+    background-image: -webkit-gradient(linear, right top, left top, from(#dc186e), to(#047CD9));
+    background-image: linear-gradient(to left, #dc186e, #047CD9);
+  }
+  .inner-circle {
+    height: 11.8rem;
+    width: 11.8rem;
+    border-radius: inherit;
+    font-size: 2.77rem;
+    letter-spacing: 0.19rem;
+  }
+  .number-days {
+    letter-spacing: 0.09rem;
+  }
+  .time-label {
+    margin-top: 1.19rem;
+    font-size: 1.76rem;
+    color: #F5F5F5;
+    text-align: center;
+  }
   .button-container {
-    margin-top: 3rem;
+    position: absolute;
+    margin-top: 19rem;
+    margin-left: 2rem;
+  }
+  .button-container .button {
+    width: 3.07rem;
+    height: 3.07rem;
+    border-radius: 20%;
+  }
+  .button-container .button svg {
+    width: 2rem;
+    height: 2rem;
+  }
+  .button-container .button .border-bg {
+    top: -0.2rem;
+    bottom: -0.2rem;
+    left: -0.2rem;
+    right: -0.2rem;
+    border-radius: 22%;
+  }
+  .social-icons {
+    margin-top: 28rem;
+    left: calc(min(46rem, 40%));
+  }
+  li {
+    margin-left: 3.15rem;
+  }
+  li svg {
+    width: 2rem;
+    height: 2rem;
+  }
+  .attribution {
+    left: 70%;
+    top: 28.5rem;
+    font-size: 1rem;
   }
 }
 
@@ -391,45 +450,23 @@ li:hover svg path {
   }
   .header-container {
     padding-top: 7.70rem;
+    padding-bottom: 11rem;
     margin-left: 10.92rem;
     margin-right: 10.92rem;
-    background-image: url(../../assets/hero-img.png);
     background-position: right 5rem;
-    background-repeat: no-repeat;
-    background-size: 40%;
+    background-size: 39%;
   }
   h1 {
-    width: 50%;
-    margin-bottom: 2.5rem;
-    font-size: clamp(5.6rem, calc(12vw + 1rem), 7.7rem);
     letter-spacing: 0.4rem;
   }
-  h1 .line2 {
-    margin-top: -3.5rem;
-  }
   input[type=email] {
-    width: 100%;
     padding: 1.84rem 20rem 1.84rem 5.38rem;
-    background-image: url("/assets/icons/email-icon.svg");
-    background-position: 1.7rem 2rem;
-    background-repeat: no-repeat;
-    background-color: #EDEDED;
-    border: 0.5rem solid rgba(41, 41, 41, 0.8);
-    border-radius: 7.7rem;
-    font-size: 1.16rem;
   }
-  input[type=email]:focus-visible {
-    border: 0.5rem solid #2AA1FE;
-  }
-  input[type=submit] {
-    position: absolute;
-    padding: 1.27rem 3.84rem;
-    margin: 0.85rem auto 0 -18.3rem;
-    font-size: 1.46rem;
-    font-weight: 700;
+  footer {
+    padding: 0 10.92rem 24rem 10.92rem;
   }
   .button-container {
-    margin-top: 3rem;
+    margin-top: 16rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
