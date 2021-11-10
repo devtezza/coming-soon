@@ -10,22 +10,17 @@
    }
 
 body, html {
-    height: max(100%);
+    height: 100%;
     font-size: 13px;
 }
 
 body {
-    border: 1px solid green;
-    
-    // height: auto;
     max-width: 1440px;
-    min-width: 310px;
+    min-width: 300px;
     margin: 0 auto;
-
     
     font-weight: 400;
-    font-family: 'Poppins', sans-serif;
-        
+    font-family: 'Poppins', sans-serif;        
 }
 
 h1, h2 {
@@ -73,6 +68,20 @@ svg * {
     } 
 }
 
+@mixin media-2xl {
+    @media screen and (min-width: 1600px) {
+        @content;
+    }       
+}
 
+@mixin media-2sm {
+    @media screen and (max-width: 365px)  {
+        @content;
+    }
+}
 
-
+@mixin media-fallback {
+    @media screen and (max-width: 325px) {
+        @content;
+    }
+}

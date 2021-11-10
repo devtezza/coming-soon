@@ -1,7 +1,6 @@
-footer {
-    // border: 1px solid yellow;
+footer {    
     display: flex;
-    height: 50%;
+    height: 37%;
     
     width: 100%;
     background: #999999;
@@ -10,13 +9,12 @@ footer {
 
 .counter-container {
     position: absolute;
+    display: flex;
+
     margin-top: -1.077rem;
     margin-bottom: 13.4rem;
     left: 50%;
-    transform: translateX(-50%);
-    // border: 1px solid red;
-    display: flex;    
-   
+    transform: translateX(-50%); 
 }
 
 .time-container {
@@ -51,9 +49,7 @@ footer {
     
     background-image: $circle-bg;
     border-radius: inherit; 
-    
-    
-    
+
     font-family: 'Michroma', sans-serif;
     font-size: 1.23rem;
     letter-spacing: 0.077rem;
@@ -73,8 +69,7 @@ footer {
     text-align: center;
 }
 
-.button-container { 
-    
+.button-container {
     position: absolute;
     
     margin-top: 12rem;
@@ -89,20 +84,13 @@ footer {
         display: flex;       
         align-items: center;        
         justify-content: center;
-
-        // border: 1px solid green;
               
         width: 2rem;
         height: 2rem;
         padding: 0;
         
         background: $header-bg;
-        border-radius: 13%;
-
-            // svg * {
-            //     width: 100%;
-            //     height: 100%;
-            // }
+        border-radius: 13%;           
 
             svg {
                 
@@ -119,11 +107,9 @@ footer {
             top: -0.2rem;
             bottom: -0.2rem;
             left: -0.2rem;
-            right: -0.2rem;
+            right: -0.2rem;            
             
-            
-            background: $to-right;
-            
+            background: $to-right;            
             border-radius: 15%;
 
             z-index: -3;
@@ -132,7 +118,6 @@ footer {
 }
 
 .social-icons {
-    // border: 1px solid gold;
     position: absolute;
     margin-top: 19rem;
     left: 50%;
@@ -141,7 +126,6 @@ footer {
 
 li {
     display: inline-block;
-    // border: 1px solid red;
 
     margin-left: 1.54rem;
     
@@ -161,9 +145,7 @@ li {
         svg {
             
             path {
-                // transition: all .5s ease;
-                fill: $dark-minus;
-                                
+                fill: $dark-minus;                                
             }
         }
     }
@@ -172,9 +154,8 @@ li {
 .attribution {
     position: relative;
     top: 22rem;
+    margin: 0 auto;
     font-size: 0.7rem;
     color: $light-plus;
     text-align: center;
 }
-
-
