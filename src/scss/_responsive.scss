@@ -41,7 +41,7 @@
             font-size: 1.5rem;            
         }
 
-        .button-container {
+        .btn-container {
             margin-top: 16rem;
             margin-left: 3.5rem;
         }
@@ -176,12 +176,12 @@
         text-align: center;
     }
 
-    .button-container {
+    .btn-container {
         position: absolute;
         margin-top: 17rem;
         margin-left: 6rem;        
 
-        .button {  
+        .counter-btn {  
             width: 3.07rem;
             height: 3.07rem;           
             border-radius: 20%;
@@ -241,7 +241,7 @@
         padding: 0 10.92rem auto 10.92rem;                 
     }
 
-    .button-container {        
+    .btn-container {        
         margin-left: 10.92rem;
     }
 }
@@ -281,7 +281,7 @@
         height: calc(max(812px, 100%));
     }
 
-    .counter-container {       
+    .btn-container {       
         position: relative;
     }
 

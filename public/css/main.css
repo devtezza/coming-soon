@@ -216,7 +216,7 @@ footer {
   text-align: center;
 }
 
-.button-container {
+.btn-container {
   position: absolute;
   margin-top: 12rem;
   margin-left: 1.5rem;
@@ -225,7 +225,7 @@ footer {
   cursor: pointer;
 }
 
-.button-container .button {
+.btn-container .counter-btn {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -244,16 +244,16 @@ footer {
   border-radius: 13%;
 }
 
-.button-container .button svg {
+.btn-container .counter-btn svg {
   width: 2rem;
   height: 2rem;
 }
 
-.button-container .button svg path {
+.btn-container .counter-btn svg path {
   stroke: #3B3B3B;
 }
 
-.button-container .button .border-bg {
+.btn-container .counter-btn .border-bg {
   position: absolute;
   top: -0.2rem;
   bottom: -0.2rem;
@@ -305,6 +305,102 @@ li:hover svg path {
   text-align: center;
 }
 
+.modal {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  opacity: 1;
+  visibility: visible;
+  z-index: 900;
+  top: 3.84rem;
+  width: 100%;
+  height: 30.76rem;
+  padding: 0 1.93rem;
+  background: #EDEDED;
+  border: 1px solid blue;
+  border-radius: 1.54rem 1.54rem 0 0;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+.modal.active {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  z-index: 900;
+  top: 3.84rem;
+}
+
+.modal-header {
+  height: 10.54rem;
+}
+
+.modal-header h4 {
+  margin-top: 2.93rem;
+  font-size: 1.46rem;
+  font-weight: 700;
+}
+
+.modal-header p {
+  margin-top: 1.39rem;
+  font-size: 1.23rem;
+}
+
+.modal-content {
+  position: relative;
+  height: 16rem;
+  width: 100%;
+  border-radius: 1.54rem;
+  background: #F5F5F5;
+}
+
+.modal-content .modal-border {
+  position: absolute;
+  content: '';
+  top: -0.16rem;
+  bottom: -0.16rem;
+  right: -0.16rem;
+  left: -0.16rem;
+  background-image: -webkit-gradient(linear, left top, right top, from(#dc186e), to(#2AA1FE));
+  background-image: linear-gradient(to right, #dc186e, #2AA1FE);
+  border-radius: 1.64rem;
+  z-index: -1;
+}
+
+label {
+  margin-left: 3.5rem;
+  margin-top: 0.61rem;
+  font-size: 1.23rem;
+  font-weight: 700;
+}
+
+.thedate {
+  background: #EDEDED;
+  width: 67.73%;
+  margin: 0.61rem auto;
+  padding: 0.62rem;
+  border-radius: 0.77rem;
+}
+
+.modal-footer {
+  height: 4.22rem;
+}
+
+.modal-footer .btn-container {
+  position: relative;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 @media screen and (min-width: 640px) {
   body, html {
     height: calc(max(1024px, 100%));
@@ -335,7 +431,7 @@ li:hover svg path {
     margin-top: 1.19rem;
     font-size: 1.5rem;
   }
-  .button-container {
+  .btn-container {
     margin-top: 16rem;
     margin-left: 3.5rem;
   }
@@ -435,21 +531,21 @@ li:hover svg path {
     color: #F5F5F5;
     text-align: center;
   }
-  .button-container {
+  .btn-container {
     position: absolute;
     margin-top: 17rem;
     margin-left: 6rem;
   }
-  .button-container .button {
+  .btn-container .counter-btn {
     width: 3.07rem;
     height: 3.07rem;
     border-radius: 20%;
   }
-  .button-container .button svg {
+  .btn-container .counter-btn svg {
     width: 2rem;
     height: 2rem;
   }
-  .button-container .button .border-bg {
+  .btn-container .counter-btn .border-bg {
     top: -0.2rem;
     bottom: -0.2rem;
     left: -0.2rem;
@@ -487,7 +583,7 @@ li:hover svg path {
   footer {
     padding: 0 10.92rem auto 10.92rem;
   }
-  .button-container {
+  .btn-container {
     margin-left: 10.92rem;
   }
 }
@@ -520,7 +616,7 @@ li:hover svg path {
   body, html {
     height: calc(max(812px, 100%));
   }
-  .counter-container {
+  .btn-container {
     position: relative;
   }
   .social-icons {
