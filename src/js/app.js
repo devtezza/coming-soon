@@ -13,6 +13,20 @@ function toggleModal() {
 }
 
 
+const theDate = flatpickr(".thedate", {
+    altInput: true,
+    altFormat: "F j, Y",
+    dateFormat: "Y-m-d",
+});
+
+const theTime = flatpickr(".thetime", {
+    enableTime: true,
+    noCalendar: true,
+    dateFormat: "H:i",
+    time_24hr: true,
+    defaultHour:new Date().getHours(),
+    defaultMinute:new Date().getMinutes()
+});
 
 
 

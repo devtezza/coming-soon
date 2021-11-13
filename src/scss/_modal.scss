@@ -53,6 +53,14 @@
 
 .modal-content {
     position: relative;  
+    display: grid;
+    align-items: center;
+    justify-content: center;
+   
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "date date" "time button";
+    
     height: 16rem;
     width: 100%;
 
@@ -60,6 +68,8 @@
     border-radius: 1.54rem;
 
     background: $light;
+
+    
 
     .modal-border {
         
@@ -77,36 +87,79 @@
         z-index: -1;
         // border: 1px solid gold;
     }
-
-    // label, input {
-    //     display: block;       
-    // }
 }
 
 
+label, .thedate, .thetime {
+    display: block;
+    margin-left: calc(min(0.5rem, 2.7rem));
+          
+}
 
 label {
-    margin-left: 3.5rem;
+    
     margin-top: 0.61rem;
     font-size: 1.23rem;
     font-weight: 700;
 }
 
-.thedate {
-    background: $light-plus;
-    // background-image: url(../../assets/icons/calendar-icon.svg);
-    // background-repeat: no-repeat;
-    // background-position: left center;
+.thedate, .thetime {
+    background: $light-minus;
+    border: 0.01px solid $dark-minus;
+    border-radius: 0.77rem;
+    padding: 0.42rem;
+    padding-left: 0.62rem;
+
+    
+}
+
+.thedate {    
+    background-image: url(../../assets/icons/calendar-icon.svg);
+    background-repeat: no-repeat;
+    background-position: 0.62rem center;
+   
 
     width: 67.73%;
-    margin: 0.61rem auto;
-    padding: 0.62rem;
-    // padding-left: 3rem;
+    margin: 0.61rem;
+    
 
     // font-size: 1.23rem;
     // border: 0.03px solid $dark-minus;
     // outline: none;
-    border-radius: 0.77rem; 
+    
+}
+
+.thetime {
+    width: 60%;
+    background-image: url(../../assets/icons/clock-icon.svg);
+    background-repeat: no-repeat;
+    background-position: 0.62rem center;
+}
+
+.date-area {
+    grid-area: date;
+    // border: 1px solid green;
+}
+
+.time-area {
+    grid-area: time; 
+    // border: 1px solid blue;   
+}
+
+.modal-btn {
+    grid-area: button;
+    // border: 1px solid red;
+    
+    width: 9.62rem;
+    height: 2.61rem;
+    padding: 0.62rem 3.46rem;
+    margin-top: 2.44rem;
+    border-radius: 2rem;
+    outline: none;
+    border: none;
+    background: $dark-minus-20;
+    color: $light-plus;
+    // align-self: baseline;
 }
 
 // input[type=date] {  

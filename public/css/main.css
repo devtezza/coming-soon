@@ -353,6 +353,19 @@ li:hover svg path {
 
 .modal-content {
   position: relative;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "date date" "time button";
   height: 16rem;
   width: 100%;
   border-radius: 1.54rem;
@@ -372,19 +385,66 @@ li:hover svg path {
   z-index: -1;
 }
 
+label, .thedate, .thetime {
+  display: block;
+  margin-left: calc(min(0.5rem, 2.7rem));
+}
+
 label {
-  margin-left: 3.5rem;
   margin-top: 0.61rem;
   font-size: 1.23rem;
   font-weight: 700;
 }
 
-.thedate {
-  background: #EDEDED;
-  width: 67.73%;
-  margin: 0.61rem auto;
-  padding: 0.62rem;
+.thedate, .thetime {
+  background: #FFF;
+  border: 0.01px solid #3B3B3B;
   border-radius: 0.77rem;
+  padding: 0.42rem;
+  padding-left: 0.62rem;
+}
+
+.thedate {
+  background-image: url(../../assets/icons/calendar-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 0.62rem center;
+  width: 67.73%;
+  margin: 0.61rem;
+}
+
+.thetime {
+  width: 60%;
+  background-image: url(../../assets/icons/clock-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 0.62rem center;
+}
+
+.date-area {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: date;
+}
+
+.time-area {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: time;
+}
+
+.modal-btn {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: button;
+  width: 9.62rem;
+  height: 2.61rem;
+  padding: 0.62rem 3.46rem;
+  margin-top: 2.44rem;
+  border-radius: 2rem;
+  outline: none;
+  border: none;
+  background: rgba(59, 59, 59, 0.2);
+  color: #EDEDED;
 }
 
 .modal-footer {
