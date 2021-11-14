@@ -14,14 +14,15 @@
     top: 3.84rem;
 
     width: 100%;
-    height: 30.76rem;
+    height: 32.76rem;
 
     // padding: 2.93rem 1.93rem 4.23rem 1.93rem;
     padding: 0 1.93rem;
 
     background: $light-plus;
-    border: 1px solid blue;
+    // border: 1px solid blue;
     border-radius: 1.54rem 1.54rem 0 0;
+    box-shadow: 0 -1.5px 6px 0 rgba(26, 15, 15, 0.2);
 
     transition: opacity .5s ease;
 
@@ -52,24 +53,15 @@
 }
 
 .modal-content {
-    position: relative;  
-    display: grid;
-    align-items: center;
-    justify-content: center;
-   
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "date date" "time button";
-    
     height: 16rem;
     width: 100%;
-
-    // border: 1px solid green;
+    position: relative; 
+    top: 0.61rem;
+    
+    
     border-radius: 1.54rem;
 
     background: $light;
-
-    
 
     .modal-border {
         
@@ -89,10 +81,30 @@
     }
 }
 
+.top-row, .bottom-row {
+    width: 19.54rem;
+    
+    margin: 0 auto;
+    // border: 1px solid red;
+}
+
+.bottom-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.date-area {
+    width: 19.54rem;
+}
+
+.time-area {
+    width: 6.77rem;    
+}
 
 label, .thedate, .thetime {
     display: block;
-    margin-left: calc(min(0.5rem, 2.7rem));
+    // margin-left: calc(min(0.5rem, 2.7rem));
           
 }
 
@@ -107,8 +119,12 @@ label {
     background: $light-minus;
     border: 0.01px solid $dark-minus;
     border-radius: 0.77rem;
+    
+    width: 100%;
+
+    margin-top: 0.61rem;
     padding: 0.42rem;
-    padding-left: 0.62rem;
+    padding-left: 2.62rem;
 
     
 }
@@ -117,43 +133,22 @@ label {
     background-image: url(../../assets/icons/calendar-icon.svg);
     background-repeat: no-repeat;
     background-position: 0.62rem center;
-   
-
-    width: 67.73%;
-    margin: 0.61rem;
-    
-
-    // font-size: 1.23rem;
-    // border: 0.03px solid $dark-minus;
-    // outline: none;
-    
 }
 
 .thetime {
-    width: 60%;
+    
     background-image: url(../../assets/icons/clock-icon.svg);
     background-repeat: no-repeat;
     background-position: 0.62rem center;
 }
 
-.date-area {
-    grid-area: date;
-    // border: 1px solid green;
-}
-
-.time-area {
-    grid-area: time; 
-    // border: 1px solid blue;   
-}
-
 .modal-btn {
-    grid-area: button;
+    // grid-area: button;
     // border: 1px solid red;
     
     width: 9.62rem;
     height: 2.61rem;
-    padding: 0.62rem 3.46rem;
-    margin-top: 2.44rem;
+    
     border-radius: 2rem;
     outline: none;
     border: none;
@@ -162,72 +157,10 @@ label {
     // align-self: baseline;
 }
 
-// input[type=date] {  
-//     // position: relative; 
-//     width: 67.73%;
-//     margin: 0.61rem auto;
-//     padding: 0.62rem;
-//     padding-left: 3rem;
-
-//     border: 0.03px solid $dark-minus;
-//     outline: none;
-//     border-radius: 0.77rem;
-    
-//     background: $light-minus;
-//     // background-image: url(../../assets/icons/calendar-icon.svg); 
-//     // background-repeat: no-repeat;
-//     // background-position: 0.5rem center;
-
-//     font-size: 1.23rem;  
-    
-//     // &::-webkit-calendar-picker-indicator {
-//     //     position: absolute;
-//     //     top: -150%;
-//     //     left: -150%;
-//     //     width: 300%;
-//     //     height: 300%;
-//     //     cursor: pointer;        
-//     // }
-
-   
-// }
-
-// input[type=time] {  
-//     position: relative; 
-//     width: 22.3%;
-//     margin: 0.61rem auto;
-//     padding: 0.62rem;
-//     padding-left: 3rem;
-
-//     border: 0.03px solid $dark-minus;
-//     outline: none;
-//     border-radius: 0.77rem;
-    
-//     background: $light-minus;
-//     background-image: url(../../assets/icons/clock.svg); 
-//     background-repeat: no-repeat;
-//     background-position: left center;
-
-//     font-size: 1.23rem;  
-    
-//     &::-webkit-calendar-picker-indicator {        
-//         position: absolute;
-//         top: -150%;
-//         left: -150%;
-//         width: 300%;
-//         height: 300%;
-//         cursor: pointer;     
-//     }
-
-   
-// }
-
-
- 
-
 .modal-footer {
+    margin-top: 1.2rem;
     height: 4.22rem;
-    // border: 1px solid black;
+    
     
 
     .btn-container {

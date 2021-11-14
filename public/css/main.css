@@ -319,11 +319,12 @@ li:hover svg path {
   z-index: 900;
   top: 3.84rem;
   width: 100%;
-  height: 30.76rem;
+  height: 32.76rem;
   padding: 0 1.93rem;
   background: #EDEDED;
-  border: 1px solid blue;
   border-radius: 1.54rem 1.54rem 0 0;
+  -webkit-box-shadow: 0 -1.5px 6px 0 rgba(26, 15, 15, 0.2);
+          box-shadow: 0 -1.5px 6px 0 rgba(26, 15, 15, 0.2);
   -webkit-transition: opacity .5s ease;
   transition: opacity .5s ease;
 }
@@ -352,22 +353,10 @@ li:hover svg path {
 }
 
 .modal-content {
-  position: relative;
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-      grid-template-areas: "date date" "time button";
   height: 16rem;
   width: 100%;
+  position: relative;
+  top: 0.61rem;
   border-radius: 1.54rem;
   background: #F5F5F5;
 }
@@ -385,9 +374,33 @@ li:hover svg path {
   z-index: -1;
 }
 
+.top-row, .bottom-row {
+  width: 19.54rem;
+  margin: 0 auto;
+}
+
+.bottom-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.date-area {
+  width: 19.54rem;
+}
+
+.time-area {
+  width: 6.77rem;
+}
+
 label, .thedate, .thetime {
   display: block;
-  margin-left: calc(min(0.5rem, 2.7rem));
 }
 
 label {
@@ -400,46 +413,27 @@ label {
   background: #FFF;
   border: 0.01px solid #3B3B3B;
   border-radius: 0.77rem;
+  width: 100%;
+  margin-top: 0.61rem;
   padding: 0.42rem;
-  padding-left: 0.62rem;
+  padding-left: 2.62rem;
 }
 
 .thedate {
   background-image: url(../../assets/icons/calendar-icon.svg);
   background-repeat: no-repeat;
   background-position: 0.62rem center;
-  width: 67.73%;
-  margin: 0.61rem;
 }
 
 .thetime {
-  width: 60%;
   background-image: url(../../assets/icons/clock-icon.svg);
   background-repeat: no-repeat;
   background-position: 0.62rem center;
 }
 
-.date-area {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: date;
-}
-
-.time-area {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: time;
-}
-
 .modal-btn {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: button;
   width: 9.62rem;
   height: 2.61rem;
-  padding: 0.62rem 3.46rem;
-  margin-top: 2.44rem;
   border-radius: 2rem;
   outline: none;
   border: none;
@@ -448,6 +442,7 @@ label {
 }
 
 .modal-footer {
+  margin-top: 1.2rem;
   height: 4.22rem;
 }
 
@@ -537,6 +532,9 @@ label {
 }
 
 @media screen and (min-width: 1024px) {
+  body {
+    border: 1px solid blue;
+  }
   .header-container {
     margin-left: 6rem;
     margin-right: 6rem;
@@ -620,6 +618,13 @@ label {
     margin-left: 70%;
     margin-top: 2.5rem;
   }
+  .modal {
+    width: 64.3%;
+    height: 39.46rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -646,6 +651,9 @@ label {
   .btn-container {
     margin-left: 10.92rem;
   }
+  .modal {
+    padding: 0 10.24rem;
+  }
 }
 
 @media screen and (min-width: 1600px) {
@@ -670,6 +678,16 @@ label {
   .time-container {
     margin-left: 0.5rem;
   }
+  .top-row, .bottom-row {
+    width: 78.16%;
+    margin: 0 auto;
+  }
+  .date-area {
+    width: 100%;
+  }
+  .time-area {
+    width: 34.65%;
+  }
 }
 
 @media screen and (max-width: 325px) {
@@ -692,6 +710,12 @@ label {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
+  }
+  .bottom-row {
+    display: block;
+  }
+  .modal-btn {
+    margin-top: 1.5rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

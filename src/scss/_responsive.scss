@@ -62,13 +62,10 @@
         .attribution {
             margin-top: 4rem;
             font-size: 1rem;        
-        }
+        }        
 }
 
-@include media-md {
-    //  body {
-    //      border: 2px dotted black;
-    //  }
+@include media-md {    
      
      .header-container {
         margin-left: 5.46rem;
@@ -98,13 +95,59 @@
     
         font-size: 1.46rem;
         font-weight: 700;
-    }
+    } 
+    
+    // .modal {
+    //     padding: 0 8.16rem;
+    // }
+
+    // .modal-content {
+    //     height: 54.6%;
+    //     display: grid;
+    //     padding: 4rem 2rem;
+
+    //     align-items: baseline;
+        
+    //     grid-template-columns: 1fr 1fr;
+    //     grid-template-rows: 1fr 1fr;
+    //     grid-template-areas: "date time" "button button"
+    //     ;
+    // }   
+
+    // .top-row, .bottom-row {
+
+    //     width: 100%;        
+    //     margin: 0;
+    // }
+   
+    // .bottom-row {
+        
+    //     grid-area: time;
+    //     display: grid;        
+       
+    //     grid-template-rows: 1fr 1fr;
+    //     grid-template-columns: 2fr;
+    //     grid-template-areas: ". time" "button button";
+
+    //     align-items: start;
+    //     justify-items: end;
+    // }    
+
+    // .date-area {
+    //     grid-area: date;
+    // }
+
+    // .modal-btn {
+    //     grid-area: button;
+    //     margin: 3.47rem 0 0 1%;
+        
+    // }
 }
 
 @include media-lg {  
-    // body {        
-    //     border: 1px solid blue;
-    // }
+    body {        
+        border: 1px solid blue;
+    }
 
     .header-container {      
         margin-left: 6rem;
@@ -210,6 +253,19 @@
         margin-left: 70%;
         margin-top: 2.5rem;       
     }
+
+    .modal {
+        width: 64.3%;
+        height: 39.46rem;
+        
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    // .modal-btn {
+    //     width: 12rem;
+    // }
+    
 }
 
 @include media-xl {    
@@ -244,6 +300,10 @@
     .btn-container {        
         margin-left: 10.92rem;
     }
+
+    .modal {
+        padding: 0 10.24rem
+    }
 }
 
 @include media-2xl {
@@ -272,7 +332,20 @@
     .time-container {
         margin-left: 0.5rem;       
             
-    } 
+    }
+
+    .top-row, .bottom-row {
+        width: 78.16%;
+        margin: 0 auto;       
+    }
+    
+    .date-area {
+        width: 100%;
+    }
+    
+    .time-area {
+        width: 34.65%;
+    }
 }
 
 @include media-fallback {
@@ -300,4 +373,16 @@
         left: 50%;
         transform: translateX(-50%);       
     }
+
+    .bottom-row {
+        display: block;
+    }    
+
+    .modal-btn {
+        margin-top: 1.5rem;
+    }
+
 }
+
+
+
