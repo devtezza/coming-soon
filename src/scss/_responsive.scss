@@ -95,59 +95,13 @@
     
         font-size: 1.46rem;
         font-weight: 700;
-    } 
-    
-    // .modal {
-    //     padding: 0 8.16rem;
-    // }
-
-    // .modal-content {
-    //     height: 54.6%;
-    //     display: grid;
-    //     padding: 4rem 2rem;
-
-    //     align-items: baseline;
-        
-    //     grid-template-columns: 1fr 1fr;
-    //     grid-template-rows: 1fr 1fr;
-    //     grid-template-areas: "date time" "button button"
-    //     ;
-    // }   
-
-    // .top-row, .bottom-row {
-
-    //     width: 100%;        
-    //     margin: 0;
-    // }
-   
-    // .bottom-row {
-        
-    //     grid-area: time;
-    //     display: grid;        
-       
-    //     grid-template-rows: 1fr 1fr;
-    //     grid-template-columns: 2fr;
-    //     grid-template-areas: ". time" "button button";
-
-    //     align-items: start;
-    //     justify-items: end;
-    // }    
-
-    // .date-area {
-    //     grid-area: date;
-    // }
-
-    // .modal-btn {
-    //     grid-area: button;
-    //     margin: 3.47rem 0 0 1%;
-        
-    // }
+    }
 }
 
 @include media-lg {  
-    body {        
-        border: 1px solid blue;
-    }
+    // body {        
+    //     border: 1px solid blue;
+    // }
 
     .header-container {      
         margin-left: 6rem;
@@ -255,23 +209,70 @@
     }
 
     .modal {
-        width: 64.3%;
+        width: calc(min(64.3%, 100rem));
         height: 39.46rem;
         
         left: 50%;
         transform: translateX(-50%);
     }
-
-    // .modal-btn {
-    //     width: 12rem;
-    // }
     
+    .modal-header { 
+        h4 {                  
+            font-size: 1.61rem;           
+        }
+    
+        p {
+            margin-top: 1rem;           
+        }
+    }
+
+    .modal-content {
+        height: 21.53rem;
+    }
+
+    .top-row, .bottom-row {        
+        width: 26.61rem;        
+        margin: 2.1rem auto;        
+    }
+
+    .date-area {
+        width: 26.61rem;
+    }
+    
+    .time-area {
+        width: 10rem;    
+    }
+
+    label {
+        font-size: 1.46rem;
+    }
+
+    .thedate, .thetime {      
+        padding: 1rem;
+        padding-left: 4rem;
+    }
+
+    .modal-btn {        
+        width: 12.5rem;
+        height: 3.46rem;
+
+        text-align: center;
+        font-size: 1.46rem;
+    }
+
+    .modal-footer {
+        height: 7.22rem; 
+    
+        .btn-container {            
+            margin-top: 2rem;
+        }
+    }    
 }
 
 @include media-xl {    
     body {
-        border: 2px solid gold;
-        // border: none;
+        // border: 2px solid gold;
+        border: none;
     }
 
     .header-container { 
@@ -372,17 +373,10 @@
         top: 95%;        
         left: 50%;
         transform: translateX(-50%);       
-    }
-
-    .bottom-row {
-        display: block;
-    }    
+    }      
 
     .modal-btn {
-        margin-top: 1.5rem;
+        width: 8rem;
+        height: 2.61rem;
     }
-
 }
-
-
-

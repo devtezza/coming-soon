@@ -348,7 +348,7 @@ li:hover svg path {
 }
 
 .modal-header p {
-  margin-top: 1.39rem;
+  margin-top: 0;
   font-size: 1.23rem;
 }
 
@@ -376,7 +376,7 @@ li:hover svg path {
 
 .top-row, .bottom-row {
   width: 19.54rem;
-  margin: 0 auto;
+  margin: 1.3rem auto;
 }
 
 .bottom-row {
@@ -410,13 +410,13 @@ label {
 }
 
 .thedate, .thetime {
-  background: #FFF;
-  border: 0.01px solid #3B3B3B;
-  border-radius: 0.77rem;
   width: 100%;
   margin-top: 0.61rem;
   padding: 0.42rem;
   padding-left: 2.62rem;
+  border: 0.01px solid #3B3B3B;
+  border-radius: 0.77rem;
+  background: #FFF;
 }
 
 .thedate {
@@ -532,9 +532,6 @@ label {
 }
 
 @media screen and (min-width: 1024px) {
-  body {
-    border: 1px solid blue;
-  }
   .header-container {
     margin-left: 6rem;
     margin-right: 6rem;
@@ -619,17 +616,55 @@ label {
     margin-top: 2.5rem;
   }
   .modal {
-    width: 64.3%;
+    width: calc(min(64.3%, 100rem));
     height: 39.46rem;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
+  .modal-header h4 {
+    font-size: 1.61rem;
+  }
+  .modal-header p {
+    margin-top: 1rem;
+  }
+  .modal-content {
+    height: 21.53rem;
+  }
+  .top-row, .bottom-row {
+    width: 26.61rem;
+    margin: 2.1rem auto;
+  }
+  .date-area {
+    width: 26.61rem;
+  }
+  .time-area {
+    width: 10rem;
+  }
+  label {
+    font-size: 1.46rem;
+  }
+  .thedate, .thetime {
+    padding: 1rem;
+    padding-left: 4rem;
+  }
+  .modal-btn {
+    width: 12.5rem;
+    height: 3.46rem;
+    text-align: center;
+    font-size: 1.46rem;
+  }
+  .modal-footer {
+    height: 7.22rem;
+  }
+  .modal-footer .btn-container {
+    margin-top: 2rem;
+  }
 }
 
 @media screen and (min-width: 1440px) {
   body {
-    border: 2px solid gold;
+    border: none;
   }
   .header-container {
     padding-top: 7.70rem;
@@ -711,11 +746,9 @@ label {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
-  .bottom-row {
-    display: block;
-  }
   .modal-btn {
-    margin-top: 1.5rem;
+    width: 8rem;
+    height: 2.61rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
