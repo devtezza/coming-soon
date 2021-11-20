@@ -23,6 +23,29 @@ body {
     font-family: 'Poppins', sans-serif;        
 }
 
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+    opacity: 0;
+    visibility: hidden;        
+    background: hsla(0,0%,0%,0.4);
+    // transition: all 1s ease-in-out;
+    
+    // &.active { 
+    //     visibility: visible;
+    //     opacity: 1;
+    //     transition: all .35s ease;       
+    // }
+}
+
+.lock-scroll {  
+    overflow-y: hidden;   
+}
+
 h1, h2 {
     font-weight: 700;
 }

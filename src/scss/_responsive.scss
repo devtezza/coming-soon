@@ -178,7 +178,7 @@
         margin-top: 17rem;
         margin-left: 6rem;        
 
-        .counter-btn {  
+        .modal-toggler {  
             width: 3.07rem;
             height: 3.07rem;           
             border-radius: 20%;
@@ -209,11 +209,11 @@
     }
 
     .modal {
-        width: calc(min(64.3%, 100rem));
+        // width: calc(min(64.3%, 100rem));
         height: 39.46rem;
         
-        left: 50%;
-        transform: translateX(-50%);
+        // left: 50%;
+        // transform: translateX(-50%);
     }
     
     .modal-header { 

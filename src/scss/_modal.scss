@@ -1,34 +1,24 @@
 .modal {    
-    position: absolute;
-    // display: none;
-    // opacity: 0;
-    // visibility: hidden;
-    
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+
+    visibility: hidden;
+    // visibility: visible;
+    z-index: 0;
+    // top: 3.84rem;
+    top: 50rem;
     display: flex;
     flex-direction: column;
+    // transition: .4s ease-in;
 
-    opacity: 1;
-    visibility: visible;
-    z-index: 900;
-    top: 3.84rem;
-
-    width: 100%;
+    width: 90%;    
     height: 32.76rem;
     padding: 0 1.93rem;
 
     background: $light-plus;    
     border-radius: 1.54rem 1.54rem 0 0;
     box-shadow: 0 -1.5px 6px 0 rgba(26, 15, 15, 0.2);
-    transition: opacity .5s ease;
-
-    &.active {
-        display: block;
-        opacity: 1;
-        visibility: visible;
-        z-index: 900;
-        top: 3.84rem;
-
-    }
 }
 
 .modal-header {   
@@ -133,8 +123,26 @@ label {
     border-radius: 2rem;
     outline: none;
     border: none;
-    background: $dark-minus-20;
-    color: $light-plus;   
+    
+    color: $light-plus;  
+}
+
+.modal-btn-disabled {
+    background: $dark-minus-15;
+    color: $dark-minus-50;
+    cursor: not-allowed;
+}
+
+.modal-btn-success, .modal-btn-danger {
+    cursor: pointer;
+}
+
+.modal-btn-success {
+    background: $success;    
+}
+
+.modal-btn-danger {
+    background: $danger;    
 }
 
 .modal-footer {
@@ -149,3 +157,4 @@ label {
         transform: rotate(180deg); 
     }
 }
+

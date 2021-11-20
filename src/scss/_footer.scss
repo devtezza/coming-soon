@@ -1,10 +1,12 @@
-footer {    
+footer {
+    position: relative;    
     display: flex;
     height: 37%;
     
     width: 100%;
     background: #999999;
-    padding: 0 1.93rem 24rem 1.93rem;                 
+    padding: 0 1.93rem 24rem 1.93rem;
+    z-index: 2;                 
 }
 
 .counter-container {
@@ -14,7 +16,8 @@ footer {
     margin-top: -1.077rem;
     margin-bottom: 13.4rem;
     left: 50%;
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
+    z-index: 3; 
 }
 
 .time-container {
@@ -78,7 +81,7 @@ footer {
     
     cursor: pointer; 
 
-    .counter-btn {
+    .modal-toggler {
         position: relative;
 
         display: flex;       

@@ -21,6 +21,22 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 4;
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.lock-scroll {
+  overflow-y: hidden;
+}
+
 h1, h2 {
   font-weight: 700;
 }
@@ -138,6 +154,7 @@ input[type=submit]:hover {
 }
 
 footer {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -145,6 +162,7 @@ footer {
   width: 100%;
   background: #999999;
   padding: 0 1.93rem 24rem 1.93rem;
+  z-index: 2;
 }
 
 .counter-container {
@@ -157,6 +175,7 @@ footer {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  z-index: 3;
 }
 
 .time-container {
@@ -225,7 +244,7 @@ footer {
   cursor: pointer;
 }
 
-.btn-container .counter-btn {
+.btn-container .modal-toggler {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -244,16 +263,16 @@ footer {
   border-radius: 13%;
 }
 
-.btn-container .counter-btn svg {
+.btn-container .modal-toggler svg {
   width: 2rem;
   height: 2rem;
 }
 
-.btn-container .counter-btn svg path {
+.btn-container .modal-toggler svg path {
   stroke: #3B3B3B;
 }
 
-.btn-container .counter-btn .border-bg {
+.btn-container .modal-toggler .border-bg {
   position: absolute;
   top: -0.2rem;
   bottom: -0.2rem;
@@ -306,7 +325,13 @@ li:hover svg path {
 }
 
 .modal {
-  position: absolute;
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  visibility: hidden;
+  z-index: 0;
+  top: 50rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -314,27 +339,13 @@ li:hover svg path {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  opacity: 1;
-  visibility: visible;
-  z-index: 900;
-  top: 3.84rem;
-  width: 100%;
+  width: 90%;
   height: 32.76rem;
   padding: 0 1.93rem;
   background: #EDEDED;
   border-radius: 1.54rem 1.54rem 0 0;
   -webkit-box-shadow: 0 -1.5px 6px 0 rgba(26, 15, 15, 0.2);
           box-shadow: 0 -1.5px 6px 0 rgba(26, 15, 15, 0.2);
-  -webkit-transition: opacity .5s ease;
-  transition: opacity .5s ease;
-}
-
-.modal.active {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-  z-index: 900;
-  top: 3.84rem;
 }
 
 .modal-header {
@@ -437,8 +448,25 @@ label {
   border-radius: 2rem;
   outline: none;
   border: none;
-  background: rgba(59, 59, 59, 0.2);
   color: #EDEDED;
+}
+
+.modal-btn-disabled {
+  background: rgba(59, 59, 59, 0.15);
+  color: rgba(59, 59, 59, 0.5);
+  cursor: not-allowed;
+}
+
+.modal-btn-success, .modal-btn-danger {
+  cursor: pointer;
+}
+
+.modal-btn-success {
+  background: #00A878;
+}
+
+.modal-btn-danger {
+  background: #C21543;
 }
 
 .modal-footer {
@@ -591,16 +619,16 @@ label {
     margin-top: 17rem;
     margin-left: 6rem;
   }
-  .btn-container .counter-btn {
+  .btn-container .modal-toggler {
     width: 3.07rem;
     height: 3.07rem;
     border-radius: 20%;
   }
-  .btn-container .counter-btn svg {
+  .btn-container .modal-toggler svg {
     width: 2rem;
     height: 2rem;
   }
-  .btn-container .counter-btn .border-bg {
+  .btn-container .modal-toggler .border-bg {
     top: -0.2rem;
     bottom: -0.2rem;
     left: -0.2rem;
@@ -616,11 +644,7 @@ label {
     margin-top: 2.5rem;
   }
   .modal {
-    width: calc(min(64.3%, 100rem));
     height: 39.46rem;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
   }
   .modal-header h4 {
     font-size: 1.61rem;
