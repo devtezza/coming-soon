@@ -65,23 +65,45 @@ input[type=email] {
         outline: none;
         border: 0.3rem solid $secondary;
     }
-
-    
 }
 
-input[type=submit] {    
+.message {
+    &:before {       
+        font-size: 1rem;
+        font-weight: 600;
+        position: absolute;
+        margin-top: -1.6rem;
+        margin-left: 1rem;        
+    }
+}
+
+.error-message {
+
+    &:before {
+        @extend .message:before;
+        content: 'Enter a valid e-mail address';
+        color: $danger;
+    }
+}
+
+.success-message {
+
+    &:before {
+        @extend .message:before;
+        content: 'We will notify you about the event!'; 
+        color: $success;        
+    }
+}
+
+.submit-btn {    
     padding: 0.84rem 2.6rem;
     margin: 0 auto;
-    background-image: $to-right-double;
     
-    background-size: 135%;
-    background-position: left;
-
-    -webkit-transition: background-position .4s ease-out;
-    transition: background-position .4s ease-out;
+    background-image: $to-left-double;
+    background-size: 130%;
+    background-position: right;
     
-    
-    
+    transition: background-position, background-size .5s ease-in; 
 
     outline: none;
     border: none;
@@ -91,11 +113,25 @@ input[type=submit] {
     font-weight: 600;
     letter-spacing: 0.07rem;
     color: $light-minus;
+    cursor: pointer;    
+}
+
+.submit-btn-disabled {
+    // @extend .submit-btn;
+    cursor: not-allowed;
+    opacity: 0.5;    
+}
+
+.submit-btn-enabled {
+    // @extend .submit-btn;
+    opacity: 1;
+    cursor: pointer;
 
     &:hover {
-        // opacity: 0.9;
-        //background-size: 100%;
-        background-position: right;
+        
+        background-image: $to-right-double;
+        background-size: 100%;
+        background-position: left;
         
     }
 }

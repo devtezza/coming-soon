@@ -1,13 +1,62 @@
+const email = document.querySelector('input[type="email"]');
+const submitBtn = document.querySelector('input[type="button"]');
+const message = document.querySelector('#message');
+
+    email.addEventListener('keydown', toggleSubmitBtn);
+
+    email.addEventListener('focus', clearMessage);
+
+    email.addEventListener('blur', clearMessage);
+
+    submitBtn.addEventListener('click', verifyEmail);
+
+function verifyEmail() {   
+    if (validator.isEmail(email.value)) {        
+        if(message.classList.contains('error-message'))
+            message.classList.remove('error-message');
+        message.classList.add('success-message');
+        email.value = '';
+        email.placeholder = 'Success!'; 
+    } else {        
+        if(message.classList.contains('success-message'))
+            message.classList.remove('success-message');
+        message.classList.add('error-message');
+    }       
+}
+
+function clearMessage() {
+    if (message.classList.contains('success-message')) {
+        message.classList.remove('success-message');
+    } else if (message.classList.contains('error-message')) {
+        message.classList.remove('error-message');
+    }
+
+    if(email.placeholder === 'Success!') {
+        email.placeholder = 'Enter your e-mail adress here ...';
+    }
+}
+
+function toggleSubmitBtn() {
+    console.log('hello');
+    console.log(email.value.length);
+    if (email.value.length <= 5) {
+        if(submitBtn.classList.contains('submit-btn-enabled')) {
+            submitBtn.classList.remove('submit-btn-enabled');
+        }
+        submitBtn.classList.add('submit-btn-disabled');
+    } else {
+        if(submitBtn.classList.contains('submit-btn-disabled')) {
+            submitBtn.classList.remove('submit-btn-disabled');
+        }
+        submitBtn.classList.add('submit-btn-enabled');
+    } 
+}
 
 const innerToggler = document.querySelector('#inner-toggler');
 const outerToggler = document.querySelector('#outer-toggler');
 
 console.log(innerToggler);
 console.log(outerToggler);
-
-// const outterToggler = document.querySelector('#outter-toggler');
-// console.log(`outter = ${outterToggler}`);
-
 
 const modal = document.querySelector('.modal');
 const modalBtn = document.querySelector('.modal-btn');
@@ -26,14 +75,6 @@ const modalMessage = document.querySelector('.modal-message');
 
 // set status to initial (status = 0) and update button status
 let counterStatus = 0;
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     if(modal.classList.contains('modal-opened')) {
-//         modal.classList.remove('modal-opened');
-//     }
-//     console.log('here');
-//     modal.classList.add('modal-closed');
-// });
 
 //Open and Close modal by clicking on modalToggler - outer and inner
 outerToggler.addEventListener('click', toggleModal);
@@ -77,8 +118,6 @@ timeField = document.querySelector('.thetime.flatpickr-input');
 
 
 function btnStatus() {
-    // console.log(`modalBtn = ${modalBtn.classList}`);
-
     console.log(`counterStatus = ${counterStatus}`);
     if (counterStatus === 0) {
         if(modalBtn.classList.contains('modal-btn-danger')) {
@@ -106,9 +145,6 @@ function btnStatus() {
             updateMessage();
         }
 }
-
-// const tlToggle = new TimelineMax({paused: true, reversed: true});
-
     const tlOpen = new TimelineMax({});
     const tlClose = new TimelineMax({});
 
@@ -118,24 +154,21 @@ function toggleModal() {
         modal.classList.remove('active');
 
         // unlock scroll when modal is closed
-        document.body.classList.remove('lock-scroll');
-        
+        document.body.classList.remove('lock-scroll');        
 
         tlClose
         .fromTo(overlay, {autoAlpha: 1}, {autoAlpha: 0, duration: .5, ease: "power2.in"})
         .fromTo(modal, {zIndex: 5}, {zIndex: 0, duration: .1, ease: "power2.in"})
         .fromTo(modal, {y: -600}, {y: 0, duration: .3, delay: 0.3, ease: "power2.in"})
         .fromTo(modal, {autoAlpha: 1}, {autoAlpha: 0, duration: .3})
-        // .fromTo(outerToggler, {autoAlpha: 0,}, {autoAlpha: 1, duration: .1, ease: "power2.in"});
         
-    } else {
-        
+    } else {        
         modal.classList.add('active');
+
         // lock scroll when modal is open      
         document.body.classList.add('lock-scroll');
 
-        tlOpen
-        // .fromTo(outerToggler, {autoAlpha: 1}, {autoAlpha: 0, duration: .1})
+        tlOpen        
         .fromTo(overlay, {autoAlpha: 0}, {autoAlpha: 1, duration: .2})
         .fromTo(modal, {autoAlpha: 0}, {autoAlpha: 1, duration: .1})
         .fromTo(modal, {y: 0}, {y: -600, duration: .5, ease: "power2.in"})
@@ -173,7 +206,7 @@ function verifyStatus() {
     
     if ( (dateField.value && timeField.value) != undefined && (dateField.value && timeField.value) != null && (dateField.value && timeField.value) !== '')  {
 
-            // Verifies is counter is running (status = 2) to prevent to overwrite status. If not running, set status to 1 and update button status
+            // Verifiy if counter is running (status = 2) to prevent overwriting status. If it's not running, set status to 1 and update button status
             if(! counterStatus === 2) {
                 counterStatus = 1;
                 console.log(`counterStatus has been set to 1: ${counterStatus}`);
@@ -200,9 +233,7 @@ function runCountdown() {
 
 function calcInterval() {
     const launchDate = new Date(`${dateOutput}, ${timeOutput}`).getTime();
-    const now = new Date().getTime();
-
-    // console.log(launchDate);
+    const now = new Date().getTime();   
 
     if (launchDate < now || isNaN(launchDate) || launchDate === undefined || launchDate === null || launchDate === '') {
 
@@ -278,9 +309,7 @@ function calcTime(difference) {
         gsap.fromTo(numberSeconds, {scale: 0}, {scale: 1, duration: .8, ease: "circle.in"});
     } else {
         numberSeconds.innerHTML = timeSeconds
-    }
-
-    
+    }    
 
     // numberDays.innerHTML = timeDays;
     // numberHours.innerHTML = timeHours;
@@ -327,5 +356,3 @@ function updateMessage() {
         modalMessage.innerHTML = "Select the date and the time everyone will be waiting for:"
     }
 }
-
-// console.log(gsap);

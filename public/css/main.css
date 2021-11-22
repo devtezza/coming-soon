@@ -49,7 +49,7 @@ h3 {
   font-size: 1.23rem;
 }
 
-input[type=submit], li {
+li {
   cursor: pointer;
 }
 
@@ -131,15 +131,33 @@ input[type=email]:focus-visible {
   border: 0.3rem solid #2AA1FE;
 }
 
-input[type=submit] {
+.message:before, .error-message:before, .success-message:before {
+  font-size: 1rem;
+  font-weight: 600;
+  position: absolute;
+  margin-top: -1.6rem;
+  margin-left: 1rem;
+}
+
+.error-message:before {
+  content: 'Enter a valid e-mail address';
+  color: #C21543;
+}
+
+.success-message:before {
+  content: 'We will notify you about the event!';
+  color: #00A878;
+}
+
+.submit-btn {
   padding: 0.84rem 2.6rem;
   margin: 0 auto;
-  background-image: -webkit-gradient(linear, right top, left top, from(#047CD9), color-stop(20%, #2AA1FE), color-stop(90%, #B50B56));
-  background-image: linear-gradient(270deg, #047CD9 0%, #2AA1FE 20%, #B50B56 90%);
-  background-size: 135%;
-  background-position: left;
-  -webkit-transition: background-position .4s ease-out;
-  transition: background-position .4s ease-out;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(10%, #B50B56), color-stop(80%, #2AA1FE), to(#047CD9));
+  background-image: linear-gradient(270deg, #B50B56 10%, #2AA1FE 80%, #047CD9 100%);
+  background-size: 130%;
+  background-position: right;
+  -webkit-transition: background-position, background-size .5s ease-in;
+  transition: background-position, background-size .5s ease-in;
   outline: none;
   border: none;
   border-radius: 5.38rem;
@@ -147,10 +165,24 @@ input[type=submit] {
   font-weight: 600;
   letter-spacing: 0.07rem;
   color: #FFF;
+  cursor: pointer;
 }
 
-input[type=submit]:hover {
-  background-position: right;
+.submit-btn-disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.submit-btn-enabled {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.submit-btn-enabled:hover {
+  background-image: -webkit-gradient(linear, right top, left top, from(#047CD9), color-stop(20%, #2AA1FE), color-stop(90%, #B50B56));
+  background-image: linear-gradient(270deg, #047CD9 0%, #2AA1FE 20%, #B50B56 90%);
+  background-size: 100%;
+  background-position: left;
 }
 
 footer {
@@ -550,7 +582,7 @@ label {
   input[type=email]:focus-visible {
     border: 0.5rem solid #2AA1FE;
   }
-  input[type=submit] {
+  .submit-btn {
     position: absolute;
     padding: 1.27rem 3.84rem;
     margin: 0.85rem auto 0 -18.3rem;
