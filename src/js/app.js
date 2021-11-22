@@ -10,6 +10,7 @@ const message = document.querySelector('#message');
 
     submitBtn.addEventListener('click', verifyEmail);
 
+// Verify is a valid e-mail address
 function verifyEmail() {   
     if (validator.isEmail(email.value)) {        
         if(message.classList.contains('error-message'))
@@ -24,6 +25,7 @@ function verifyEmail() {
     }       
 }
 
+// Clear success message and error message
 function clearMessage() {
     if (message.classList.contains('success-message')) {
         message.classList.remove('success-message');
@@ -36,6 +38,7 @@ function clearMessage() {
     }
 }
 
+// Toggle submit button states between disabled/enabled
 function toggleSubmitBtn() {
     console.log('hello');
     console.log(email.value.length);
@@ -55,9 +58,6 @@ function toggleSubmitBtn() {
 const innerToggler = document.querySelector('#inner-toggler');
 const outerToggler = document.querySelector('#outer-toggler');
 
-console.log(innerToggler);
-console.log(outerToggler);
-
 const modal = document.querySelector('.modal');
 const modalBtn = document.querySelector('.modal-btn');
 const overlay = document.querySelector('.overlay');
@@ -73,7 +73,7 @@ const selectTheTime = document.querySelector('.thetime');
 const modalTitle = document.querySelector('.modal-title');
 const modalMessage = document.querySelector('.modal-message');
 
-// set status to initial (status = 0) and update button status
+// Set Counter status to initial (status = 0) and update button status
 let counterStatus = 0;
 
 //Open and Close modal by clicking on modalToggler - outer and inner
@@ -116,9 +116,8 @@ dateField = document.querySelector('.thedate.flatpickr-input');
 timeField = document.querySelector('.thetime.flatpickr-input');
 
 
-
-function btnStatus() {
-    console.log(`counterStatus = ${counterStatus}`);
+// Manage Counter button status between Disabled / Enabled Start / Enabled Stop 
+function btnStatus() {    
     if (counterStatus === 0) {
         if(modalBtn.classList.contains('modal-btn-danger')) {
             modalBtn.classList.remove('modal-btn-danger');
@@ -148,16 +147,17 @@ function btnStatus() {
     const tlOpen = new TimelineMax({});
     const tlClose = new TimelineMax({});
 
+// Toggle Modal Windows between opened/closed    
 function toggleModal() { 
     if(modal.classList.contains('active')) {
         
         modal.classList.remove('active');
 
-        // unlock scroll when modal is closed
+        // Unlock scroll when modal is closed
         document.body.classList.remove('lock-scroll');        
 
         tlClose
-        .fromTo(overlay, {autoAlpha: 1}, {autoAlpha: 0, duration: .5, ease: "power2.in"})
+        .fromTo(overlay, {autoAlpha: 1}, {autoAlpha: 0, duration: .3, ease: "power2.in"})
         .fromTo(modal, {zIndex: 5}, {zIndex: 0, duration: .1, ease: "power2.in"})
         .fromTo(modal, {y: -600}, {y: 0, duration: .3, delay: 0.3, ease: "power2.in"})
         .fromTo(modal, {autoAlpha: 1}, {autoAlpha: 0, duration: .3})
@@ -165,21 +165,21 @@ function toggleModal() {
     } else {        
         modal.classList.add('active');
 
-        // lock scroll when modal is open      
+        // lock scroll when modal is opened      
         document.body.classList.add('lock-scroll');
 
         tlOpen        
-        .fromTo(overlay, {autoAlpha: 0}, {autoAlpha: 1, duration: .2})
+        .fromTo(overlay, {autoAlpha: 0}, {autoAlpha: 1, duration: .1})
         .fromTo(modal, {autoAlpha: 0}, {autoAlpha: 1, duration: .1})
-        .fromTo(modal, {y: 0}, {y: -600, duration: .5, ease: "power2.in"})
-        .fromTo(modal, {zIndex: 0}, {zIndex: 5, duration: .1, ease: "power3.in"});       
+        .fromTo(modal, {y: 0}, {y: -600, duration: .3, ease: "power2.in"})
+        .fromTo(modal, {zIndex: 0}, {zIndex: 5, duration: .3, ease: "power3.in"});       
     } 
 }
 
 modalBtn.addEventListener('click', verifyStatus);
 
-function verifyStatus() {
-    // Verifies if counter is running
+// Verify if counter is running
+function verifyStatus() {    
     if(counterStatus === 2) {
         clearInterval(timerID);
 
@@ -220,6 +220,7 @@ function verifyStatus() {
         } 
 }
 
+// Activate Countdown
 function runCountdown() {
     if(timerID) {
 
@@ -231,6 +232,7 @@ function runCountdown() {
     }
 }
 
+// Calculate the interval (milliseconds) between current date / selected date
 function calcInterval() {
     const launchDate = new Date(`${dateOutput}, ${timeOutput}`).getTime();
     const now = new Date().getTime();   
@@ -251,6 +253,7 @@ function calcInterval() {
 
 }
 
+// Convert the interval from milliseconds to days/hours/minutes/seconds
 function calcTime(difference) {
     const seconds = 1000;
     const minutes = seconds * 60;
@@ -303,22 +306,15 @@ function calcTime(difference) {
         numberMinutes.innerHTML = timeMinutes
     }
 
-    if (verifyValues(numberSeconds.innerHTML, timeSeconds)) {
-        // gsap.to(numberSeconds, {scale: 0, duration: .4});
+    if (verifyValues(numberSeconds.innerHTML, timeSeconds)) {        
         numberSeconds.innerHTML = timeSeconds;
-        gsap.fromTo(numberSeconds, {scale: 0}, {scale: 1, duration: .8, ease: "circle.in"});
+        gsap.fromTo(numberSeconds, {scale: 0}, {scale: 1, duration: .8, ease: "circ.inOut"});
     } else {
         numberSeconds.innerHTML = timeSeconds
-    }    
-
-    // numberDays.innerHTML = timeDays;
-    // numberHours.innerHTML = timeHours;
-    // numberMinutes.innerHTML = timeMinutes;
-    // numberSeconds.innerHTML = timeSeconds;
-
-    // console.log(displaytime);
+    }   
 }
 
+// Verify the values that are displayed in the counter if they changed and if they need to be animated
 function verifyValues (currentValue, lastValue) {
     if (currentValue !== lastValue) {
         return true;
@@ -327,9 +323,8 @@ function verifyValues (currentValue, lastValue) {
     }
 }
 
-
-function verifyFields () {
-   
+// Verify if modal fields contain valid date and time
+function verifyFields () {   
     if(counterStatus !== 2) {
         if( timeField.value === '' || dateField.value === '' ) {
             console.log('first condition');
@@ -344,8 +339,8 @@ function verifyFields () {
         return;
 }
 
-function updateMessage() {
-    
+// Update the Counter message 
+function updateMessage() {    
     if(counterStatus == 2) {
         modalTitle.innerHTML = "It's counting!";
         modalMessage.innerHTML = "Hit Stop button if you want to stop and clear."

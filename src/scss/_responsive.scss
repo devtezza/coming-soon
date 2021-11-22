@@ -2,10 +2,6 @@
         body, html {
             height: calc(max(1024px, 100%));
         }
-    
-        // body {
-        //    border: 2px solid red;
-        // }
 
         .header-container {
             margin-left: 3.5rem;
@@ -30,10 +26,8 @@
         .inner-circle { 
             height: 8.2rem;
             width: 8.2rem;
-            border-radius: inherit; 
-    
+            border-radius: inherit;
             font-size: 2rem;
-            
         } 
         
         .time-label {    
@@ -65,8 +59,7 @@
         }        
 }
 
-@include media-md {    
-     
+@include media-md {
      .header-container {
         margin-left: 5.46rem;
         margin-right: 5.46rem;
@@ -98,11 +91,7 @@
     }
 }
 
-@include media-lg {  
-    // body {        
-    //     border: 1px solid blue;
-    // }
-
+@include media-lg {
     .header-container {      
         margin-left: 6rem;
         margin-right: 6rem;
@@ -141,15 +130,13 @@
     
         &:first-child {
             margin-left: 0;        
-        }
-            
+        }            
     }
 
     .outer-circle {    
         height: 13.2rem;
         width: 13.2rem;      
-        background-image: $to-left-plus;      
-        
+        background-image: $to-left-plus;
     }
     
     .inner-circle { 
@@ -163,7 +150,6 @@
     
     .number-days {
         letter-spacing: 0.09rem;
-        
     }
     
     .time-label {    
@@ -208,12 +194,8 @@
         margin-top: 2.5rem;       
     }
 
-    .modal {
-        // width: calc(min(64.3%, 100rem));
+    .modal {       
         height: 39.46rem;
-        
-        // left: 50%;
-        // transform: translateX(-50%);
     }
     
     .modal-header { 
@@ -270,8 +252,7 @@
 }
 
 @include media-xl {    
-    body {
-        // border: 2px solid gold;
+    body {        
         border: none;
     }
 
@@ -315,7 +296,6 @@
 }
 
 @include media-2sm {
-
     h1 {
         font-size: clamp(4rem, calc(10vw + 0.8rem), 5.6rem);
 
@@ -350,7 +330,6 @@
 }
 
 @include media-fallback {
-
     body, html {
         height: calc(max(812px, 100%));
     }

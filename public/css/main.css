@@ -290,9 +290,10 @@ footer {
   width: 2rem;
   height: 2rem;
   padding: 0;
-  background: -webkit-gradient(linear, left top, right bottom, from(#FFF), to(#EDEDED));
-  background: linear-gradient(to bottom right, #FFF, #EDEDED);
+  background: #FFF;
   border-radius: 13%;
+  -webkit-transition: background-color .4s ease-in;
+  transition: background-color .4s ease-in;
 }
 
 .btn-container .modal-toggler svg {
@@ -301,6 +302,8 @@ footer {
 }
 
 .btn-container .modal-toggler svg path {
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
   stroke: #3B3B3B;
 }
 
@@ -314,6 +317,14 @@ footer {
   background: linear-gradient(to right, #dc186e, #2AA1FE);
   border-radius: 15%;
   z-index: -3;
+}
+
+.btn-container .modal-toggler:hover {
+  background: rgba(59, 59, 59, 0.6);
+}
+
+.btn-container .modal-toggler:hover svg path {
+  stroke: #F5F5F5;
 }
 
 .social-icons {
@@ -491,6 +502,14 @@ label {
 
 .modal-btn-success, .modal-btn-danger {
   cursor: pointer;
+  -webkit-transition: all .4s ease-in;
+  transition: all .4s ease-in;
+}
+
+.modal-btn-success:hover, .modal-btn-danger:hover {
+  color: rgba(59, 59, 59, 0.85);
+  -webkit-box-shadow: 0 1px 2px 1px rgba(59, 59, 59, 0.5);
+          box-shadow: 0 1px 2px 1px rgba(59, 59, 59, 0.5);
 }
 
 .modal-btn-success {

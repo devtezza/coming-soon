@@ -1,17 +1,13 @@
 header {
     background-image: $header-bg;
-    height: 63%;    
-    // border: 1px solid darkblue;
+    height: 63%;
 }
 
-.header-container {   
-    // border: 1px solid black;
-      
+.header-container { 
     padding-top: 3.15rem;
     padding-bottom: 7.2rem;
     margin-left: 1.93rem;
-    margin-right: 1.93rem;
-       
+    margin-right: 1.93rem;       
 }
 
 h1 {    
@@ -23,8 +19,7 @@ h1 {
     color: $dark;
    
 
-    .line2 {
-        // border: 1px dashed orange;
+    .line2 {        
         margin-top: -2.39rem;
         background-color: $primary;
         background-image: $to-right;
@@ -99,7 +94,7 @@ input[type=email] {
     padding: 0.84rem 2.6rem;
     margin: 0 auto;
     
-    background-image: $to-left-double;
+    background-image: $to-left-270deg;
     background-size: 130%;
     background-position: right;
     
@@ -116,22 +111,18 @@ input[type=email] {
     cursor: pointer;    
 }
 
-.submit-btn-disabled {
-    // @extend .submit-btn;
+.submit-btn-disabled {    
     cursor: not-allowed;
     opacity: 0.5;    
 }
 
-.submit-btn-enabled {
-    // @extend .submit-btn;
+.submit-btn-enabled {    
     opacity: 1;
     cursor: pointer;
 
-    &:hover {
-        
-        background-image: $to-right-double;
+    &:hover {        
+        background-image: $to-right-270deg;
         background-size: 100%;
-        background-position: left;
-        
+        background-position: left;        
     }
 }

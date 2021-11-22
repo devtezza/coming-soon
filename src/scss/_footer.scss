@@ -4,7 +4,7 @@ footer {
     height: 37%;
     
     width: 100%;
-    background: #999999;
+    background: $footer-gray;
     padding: 0 1.93rem 24rem 1.93rem;
     z-index: 2;                 
 }
@@ -38,7 +38,7 @@ footer {
     
     border-radius: 50%;
     background-color: $secondary;
-    background-image: $to-right-test;
+    background-image: $to-right-250deg;
     box-shadow: 0.097rem -0.097rem 0.720rem hsla(0, 0%, 0%, 0.2);
     
 }
@@ -92,14 +92,16 @@ footer {
         height: 2rem;
         padding: 0;
         
-        background: $header-bg;
+        background: $light-minus;
         border-radius: 13%;           
 
+        transition: background-color .4s ease-in;
             svg {
                 
                 width: 2rem;
                 height: 2rem;    
                 path {
+                    transition: all .5s ease;
                     stroke: $dark-minus;
                 }
             }
@@ -116,6 +118,17 @@ footer {
             border-radius: 15%;
 
             z-index: -3;
+        }
+
+        &:hover {
+            background: $dark-minus-60;           
+
+            svg {
+
+                path {
+                    stroke: $light;
+                }
+            }
         }
     }
 }
