@@ -9,7 +9,7 @@
     transform: translateX(-50%);
     z-index: 0;
 
-    width: 90%;    
+    width: calc(min(90%, 1728px));    
     height: 32.76rem;
     padding: 0 1.93rem;
 

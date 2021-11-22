@@ -14,7 +14,7 @@ body, html {
 }
 
 body {
-  max-width: 1440px;
+  max-width: 1920px;
   min-width: 300px;
   margin: 0 auto;
   font-weight: 400;
@@ -369,12 +369,6 @@ li:hover svg path {
 
 .modal {
   position: fixed;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  visibility: hidden;
-  z-index: 0;
-  top: 50rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -382,7 +376,13 @@ li:hover svg path {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 90%;
+  visibility: hidden;
+  left: 50%;
+  top: 50rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 0;
+  width: calc(min(90%, 1728px));
   height: 32.76rem;
   padding: 0 1.93rem;
   background: #EDEDED;
