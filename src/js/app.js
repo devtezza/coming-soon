@@ -1,3 +1,8 @@
+window.addEventListener("load", () => setTimeout(callModalOnLoading, 5000));
+
+// window.addEventListener("load", () => alert('haha'));
+
+
 const email = document.querySelector('input[type="email"]');
 const submitBtn = document.querySelector('input[type="button"]');
 const message = document.querySelector('#message');
@@ -147,7 +152,18 @@ function btnStatus() {
     const tlOpen = new TimelineMax({});
     const tlClose = new TimelineMax({});
 
-// Toggle Modal Windows between opened/closed    
+//Open Modal Screen on loading, if user doesn't click modal toggler
+function callModalOnLoading() {
+       
+    if(!modal.classList.contains('active')) {
+        toggleModal()
+    } else {
+        return;
+    }    
+}
+
+
+// Toggle Modal Screen between opened/closed    
 function toggleModal() { 
     if(modal.classList.contains('active')) {
         
