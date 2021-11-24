@@ -44,9 +44,7 @@ function clearMessage() {
 }
 
 // Toggle submit button states between disabled/enabled
-function toggleSubmitBtn() {
-    console.log('hello');
-    console.log(email.value.length);
+function toggleSubmitBtn() {   
     if (email.value.length <= 5) {
         if(submitBtn.classList.contains('submit-btn-enabled')) {
             submitBtn.classList.remove('submit-btn-enabled');
@@ -204,8 +202,7 @@ function verifyStatus() {
         numberMinutes.innerHTML = '00';
         numberSeconds.innerHTML = '00';
 
-        counterStatus = 0;
-        console.log('Counter Stopped');
+        counterStatus = 0;        
 
         theDate._input.removeAttribute('disabled');
         theTime._input.removeAttribute('disabled');
@@ -214,18 +211,13 @@ function verifyStatus() {
 
         return;
     }
-
-    if (counterStatus === 0) {
-       console.log(`Status = ${counterStatus}`);
-
-    }  
+   
     
     if ( (dateField.value && timeField.value) != undefined && (dateField.value && timeField.value) != null && (dateField.value && timeField.value) !== '')  {
 
             // Verifiy if counter is running (status = 2) to prevent overwriting status. If it's not running, set status to 1 and update button status
             if(! counterStatus === 2) {
-                counterStatus = 1;
-                console.log(`counterStatus has been set to 1: ${counterStatus}`);
+                counterStatus = 1;                
                 btnStatus();
             }             
 
@@ -242,8 +234,7 @@ function runCountdown() {
 
         calcInterval();
     }
-    else {
-        console.log('error');
+    else {       
         return;
     }
 }
@@ -258,8 +249,7 @@ function calcInterval() {
         switch (launchDate) {
             case isNaN:
                 break;
-        }
-        console.log('You must select a future time');
+        }        
         clearInterval(timerID);
         return;
     }       
@@ -342,12 +332,10 @@ function verifyValues (currentValue, lastValue) {
 // Verify if modal fields contain valid date and time
 function verifyFields () {   
     if(counterStatus !== 2) {
-        if( timeField.value === '' || dateField.value === '' ) {
-            console.log('first condition');
+        if( timeField.value === '' || dateField.value === '' ) {            
             counterStatus = 0;
             btnStatus();
-        } else {
-            console.log('second condition');
+        } else {            
             counterStatus = 1;
             btnStatus();
         }
