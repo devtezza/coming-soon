@@ -91,6 +91,7 @@ const theDate = flatpickr(".thedate", {
     altFormat: "F j, Y",
     dateFormat: "Y-m-d",
     minDate: new Date(),
+    maxDate: "2024-06-30",
     disableMobile: "true",
 
     onValueUpdate: () => {
