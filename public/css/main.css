@@ -107,7 +107,7 @@ input[type=email] {
   background-color: #EDEDED;
   border: 0.3rem solid rgba(41, 41, 41, 0.8);
   border-radius: 7.7rem;
-  font-size: 1.077rem;
+  font-size: 1.24rem;
 }
 
 input[type=email]::-webkit-input-placeholder {
