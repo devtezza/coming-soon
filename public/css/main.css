@@ -59,8 +59,7 @@ svg * {
 }
 
 header {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#FFF), to(#EDEDED));
-  background-image: linear-gradient(to bottom right, #FFF, #EDEDED);
+  background: lightsteelblue;
   height: 63%;
 }
 
@@ -101,7 +100,7 @@ input[type=email] {
   width: 100%;
   padding: 0.77rem 2.3rem 0.77rem 3.85rem;
   margin-bottom: 1.7rem;
-  background-image: url("/assets/icons/email-icon.svg");
+  background-image: url("../../assets/icons/email-icon.svg");
   background-position: 1.16rem 0.77rem;
   background-repeat: no-repeat;
   background-color: #EDEDED;
