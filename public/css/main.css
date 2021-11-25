@@ -59,7 +59,8 @@ svg * {
 }
 
 header {
-  background: lightsteelblue;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FFF), to(#EDEDED));
+  background: linear-gradient(to bottom right, #FFF, #EDEDED);
   height: 63%;
 }
 
