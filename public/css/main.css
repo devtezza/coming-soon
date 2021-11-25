@@ -126,7 +126,7 @@ input[type=email]::placeholder {
   color: #3B3B3B;
 }
 
-input[type=email]:focus-visible {
+input[type=email]:focus {
   outline: none;
   border: 0.3rem solid #2AA1FE;
 }
@@ -598,7 +598,7 @@ label {
     background-position: 1.7rem 2rem;
     font-size: 1.16rem;
   }
-  input[type=email]:focus-visible {
+  input[type=email]:focus {
     border: 0.5rem solid #2AA1FE;
   }
   .submit-btn {

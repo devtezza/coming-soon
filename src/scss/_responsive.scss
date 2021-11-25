@@ -76,7 +76,7 @@
         
         font-size: 1.16rem; 
         
-        &:focus-visible {            
+        &:focus {            
             border: 0.5rem solid $secondary;
         }
     }
