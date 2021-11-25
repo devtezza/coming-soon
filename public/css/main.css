@@ -72,7 +72,7 @@ header {
 }
 
 h1 {
-  margin-bottom: 5.8rem;
+  margin-bottom: calc(max(4.5rem));
   font-size: 5.6rem;
   font-weight: 700;
   max-width: 34.62rem;
@@ -151,7 +151,7 @@ input[type=email]:focus-visible {
 
 .submit-btn {
   padding: 0.84rem 2.6rem;
-  margin: 0 auto;
+  margin: auto;
   background-image: -webkit-gradient(linear, right top, left top, color-stop(10%, #B50B56), color-stop(80%, #2AA1FE), to(#047CD9));
   background-image: linear-gradient(270deg, #B50B56 10%, #2AA1FE 80%, #047CD9 100%);
   background-size: 130%;
