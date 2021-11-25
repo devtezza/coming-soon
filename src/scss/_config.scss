@@ -10,7 +10,7 @@
    }
 
 body, html {
-    height: 100%;
+    height: calc(min(100%, 812px));
     font-size: 13px;
 }
 
