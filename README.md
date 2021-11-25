@@ -74,4 +74,4 @@ Libraries:
 This project is under the license [MIT](./LICENSE)
 
 ## README Versions
-[Portuguese](./README.md-pt-br)  |  [English](./README.md)
+[Portuguese](./README-pt-br.md)  |  [English](./README.md)

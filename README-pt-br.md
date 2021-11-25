@@ -75,4 +75,4 @@ Bibliotecas:
 This project está sob a licença [MIT](./LICENSE)
 
 ## Versões do README 
-[Português](./README.md-pt-br)  |  [Inglês](./README.md)
+[Português](./README-pt-br.md)  |  [Inglês](./README.md)
