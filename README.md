@@ -42,7 +42,7 @@ The purpose of this project is to practice UI design (using Figma) and front end
 [Design Prototypes available on Figma](https://www.figma.com/file/z7OHMZDHZgmwVersdstHmA/ComingSoon?node-id=9%3A127)
 
 ### Live Site
-[Live Site URL](https://nandotezza.github.io/coming-soon)
+[Live Site URL](https://devtezza.github.io/coming-soon)
 
 ### Tools
 
@@ -66,8 +66,8 @@ Libraries:
 
 ## Author
 
-[Fernando Tezza](https://github.com/nandotezza) \
-[Linkedin](https://www.linkedin.com/feed/)  |  [Frontend Mentor](https://www.frontendmentor.io/profile/nandotezza)
+[Fernando Tezza](https://github.com/devtezza) \
+[Linkedin](https://www.linkedin.com/in/devtezza/)  |  [Frontend Mentor](https://www.frontendmentor.io/profile/devtezza)
 
 ## License
 
