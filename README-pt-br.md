@@ -67,8 +67,8 @@ Bibliotecas:
 
 ## Autor
 
-[Fernando Tezza](https://github.com/devtezza) \
-[Linkedin](https://www.linkedin.com/feed/)  |  [Frontend Mentor](https://www.frontendmentor.io/profile/devtezza)
+[Fernando Tezza](https://github.com/devtezza) 
+[Linkedin](https://www.linkedin.com/in/devtezza/)  |  [Frontend Mentor](https://www.frontendmentor.io/profile/devtezza)
 
 ## Licença
 
