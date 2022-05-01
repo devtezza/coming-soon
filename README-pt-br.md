@@ -43,7 +43,7 @@ O propósito desse projeto é praticar UI design (design de interface - usando F
 [Design e Protótipos disponíveis no Figma](https://www.figma.com/file/z7OHMZDHZgmwVersdstHmA/ComingSoon?node-id=9%3A127)
 
 ### Demonstração
-[URL do Site de Demonstração](https://nandotezza.github.io/coming-soon)
+[URL do Site de Demonstração](https://devtezza.github.io/coming-soon)
 
 ### Ferramentas
 
@@ -67,8 +67,8 @@ Bibliotecas:
 
 ## Autor
 
-[Fernando Tezza](https://github.com/nandotezza) \
-[Linkedin](https://www.linkedin.com/feed/)  |  [Frontend Mentor](https://www.frontendmentor.io/profile/nandotezza)
+[Fernando Tezza](https://github.com/devtezza) \
+[Linkedin](https://www.linkedin.com/feed/)  |  [Frontend Mentor](https://www.frontendmentor.io/profile/devtezza)
 
 ## Licença
 
